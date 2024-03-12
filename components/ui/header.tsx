@@ -74,7 +74,7 @@ export default function Header() {
 
         </div>
       </div>
-      <div className='flex  w-full h-10 bg-gold-800 justify-center'>
+      <div className='flex  w-full h-8 bg-gold-800 justify-center'>
         <Marquee speed={80} pauseOnHover pauseOnClick direction='right' loop={0} className='w-4/6 bg-gold-800' gradient gradientColor='#977202' gradientWidth={30}>
           <div className='flex flex-row justify-evenly items-center gap-8'>
             <MarqueeComponent componentName="Gold" rate={100} marketDifference={1.8} />

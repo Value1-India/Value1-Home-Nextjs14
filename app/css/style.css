@@ -102,3 +102,18 @@
 .card:hover .title{
   color: #fabb04;
 }
+
+
+.buy-element:hover, .sell-element:hover{
+  animation: rotate-element 50s linear infinite;
+  -webkit-animation: rotate-element 50s linear infinite;
+}
+
+@keyframes rotate-element {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
