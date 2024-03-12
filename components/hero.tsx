@@ -10,14 +10,15 @@ export default function Hero() {
 
   return (
     <section>
-      <div className="max-w-full mx-20 px-4 sm:px-6 relative">
+      <div className="max-w-full md:mx-20 md:px-4 px-6 relative">
 
         {/* Hero content */}
-        <div className="relative pt-32 pb-10 md:pt-40 md:pb-16 ">
+        <div className="relative pt-40 pb-10 md:pt-40 md:pb-16 ">
 
           {/* Section header */}
-          <div className="max-w-full flex flex-row items-center justify-around mx-auto text-center pb-12 md:pb-16">
-            <div className='hero-section w-3/6'>
+          <div className="max-w-full flex flex-wrap flex-col md:flex-row md:flex-nowrap items-center justify-around mx-auto text-center pb-12 md:pb-16">
+            
+            <div className='hero-section w-full md:w-3/6 px-8'>
               {/* <div>
                 <Image src={heroFg} width={2500} alt='' />
               </div> */}
@@ -32,7 +33,8 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-            <div className='w-2/6' data-aos='fade-left' data-aos-delay='300'>
+
+            <div className='w-full md:w-5/12 px-4' data-aos='fade-left' data-aos-delay='300'>
               <RateCard goldRate={goldRate} silverRate={silverRate} />
             </div>
 

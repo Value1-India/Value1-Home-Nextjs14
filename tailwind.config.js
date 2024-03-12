@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens :{
+        xs: '320px',
+      },
       colors: {
         gold:{
           100:'#fdd868',

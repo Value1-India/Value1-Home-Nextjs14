@@ -25,23 +25,18 @@
 /* Custom Styling */
 
 .coolinput {
-    display: flex;
-    flex-direction: column;
     position: static;
   }
   
   .coolinput label.text {
-    font-size: 0.75rem;
     position: relative;
     top: 0.5rem;
     margin: 0 0 0 7px;
     padding: 0 3px;
-    background: #ffffff;
     width: fit-content;
   }
   
   .coolinput input[type=text].input {
-    padding: 11px 10px;
     border: 1px #fabb04 solid;
     border-radius: 5px;
     background: #ffffff;
@@ -75,6 +70,16 @@
   box-shadow: 0.5px 0.5px 6px 0.5px #e2aa03;
 }
 
+.card .title{
+  display: none;
+}
+
+@media screen and (min-width: 425px) {
+  .card .title{
+    display: block;
+  }
+}
+
 .card .text {
   opacity: 0;
   max-height: 0;
@@ -92,7 +97,7 @@
 .card:hover .text {
   transition: all 0.8s ease;
   opacity: 1;
-  max-height: 80px;
+  max-height: 100px;
   -webkit-transition: all 0.8s ease;
   -moz-transition: all 0.8s ease;
   -ms-transition: all 0.8s ease;
@@ -100,13 +105,14 @@
 }
 
 .card:hover .title{
+  display: block;
   color: #fabb04;
 }
 
 
-.buy-element:hover, .sell-element:hover{
-  animation: rotate-element 50s linear infinite;
-  -webkit-animation: rotate-element 50s linear infinite;
+.buy-element:hover,.sell-element:hover{
+  animation: rotate-element 3s linear infinite;
+  -webkit-animation: rotate-element 3s linear infinite;
 }
 
 @keyframes rotate-element {

@@ -10,7 +10,7 @@ const MarqueeComponent: React.FC<MarqueeProps> = ({ componentName, rate, marketD
   const isPositive = marketDifference >= 0;
 
   return (
-    <div style={{ whiteSpace: 'nowrap', overflow: 'hidden' }} className='font-semibold text-white text-lg mx-14'>
+    <div style={{ whiteSpace: 'nowrap', overflow: 'hidden' }} className='font-semibold text-white lg:text-lg lg:mx-14 text-sm mx-3'>
       <span className="marquee-content">{componentName}</span> <span className='px-2'>{'₹' + rate}</span>
       {isPositive ? (
         <span style={{ color: '#66ff66' }} className='px-1'>▲</span>

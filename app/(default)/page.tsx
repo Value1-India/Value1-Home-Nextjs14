@@ -14,7 +14,7 @@ import GetStarted from '@/components/get-started'
 export default function Home() {
   return (
     <>
-        <Hero />
+         <Hero />
         <Features />
         <Advantage />
         <GetStarted />
