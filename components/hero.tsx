@@ -1,5 +1,4 @@
-import VideoThumb from '@/public/images/hero-image-01.jpg'
-import ModalVideo from '@/components/modal-video'
+
 import RateCard from './RateCard/RateCard'
 import Image from 'next/image'
 import heroFg from '@/public/images/herosection.png'
@@ -38,16 +37,6 @@ export default function Hero() {
             </div>
 
           </div>
-
-          <ModalVideo
-            thumb={VideoThumb}
-            thumbWidth={1024}
-            thumbHeight={576}
-            thumbAlt="Modal video thumbnail"
-            video="/videos/video.mp4"
-            videoWidth={1920}
-            videoHeight={1080} />
-
         </div>
 
       </div>

@@ -8,8 +8,8 @@ import MarqueeComponent from '../marqueeElement'
 export default function Header() {
   return (
     <header className="absolute w-full z-30 mb-10">
-      <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6">
-        <div className="flex items-center justify-between h-20">
+      <div className="max-w-8xl mx-auto px-4 py-4 sm:px-6 border-b-2 border-white">
+        <div className="flex items-center justify-between h-20 mx-40">
           {/* Site branding */}
           <div className="shrink-0 mr-4">
             {/* Logo */}
@@ -74,9 +74,14 @@ export default function Header() {
 
         </div>
       </div>
-      <div className='flex bg-gold-800 w-full h-10 '>
-        <Marquee speed={10} pauseOnHover pauseOnClick direction='right' loop={0}>
-          <MarqueeComponent componentName="Gold" rate={100} marketDifference={-1.8} />
+      <div className='flex  w-full h-10 bg-gold-800 justify-center'>
+        <Marquee speed={80} pauseOnHover pauseOnClick direction='right' loop={0} className='w-4/6 bg-gold-800' gradient gradientColor='#977202' gradientWidth={30}>
+          <div className='flex flex-row justify-evenly items-center gap-8'>
+            <MarqueeComponent componentName="Gold" rate={100} marketDifference={1.8} />
+            <MarqueeComponent componentName="Silver" rate={100} marketDifference={-1.5} />
+            <MarqueeComponent componentName="Platinum" rate={100} marketDifference={0.05} />
+            <MarqueeComponent componentName="Rhodium" rate={100} marketDifference={-0.95} />
+          </div>
         </Marquee>
       </div>
     </header>

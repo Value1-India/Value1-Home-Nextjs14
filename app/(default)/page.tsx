@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Home - Value1',
+  title: 'Value1 - World`s Most Inclusive Enterprises',
   description: '',
 }
 
@@ -12,11 +12,11 @@ import Testimonials from '@/components/testimonials'
 export default function Home() {
   return (
     <>
-      <Hero />
-      <Features />
-      <Zigzag />
-      <Testimonials />
-      <Newsletter />
+        <Hero />
+        <Features />
+        <Zigzag />
+        <Testimonials />
+        <Newsletter />
     </>
   )
 }
