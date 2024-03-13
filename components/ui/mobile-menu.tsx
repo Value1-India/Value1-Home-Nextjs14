@@ -78,7 +78,7 @@ export default function MobileMenu() {
           </li>
           <li>
             <Link
-              href="#"
+              href="/about"
               className="font-semibold text-gray-700 hover:text-gold-500 px-8 py-5 flex items-center justify-center transition duration-250 ease-in-out"  onClick={() => setMobileNavOpen(false)}
             >
               About

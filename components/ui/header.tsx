@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import MobileMenu from './mobile-menu'
-import logo from '@/public/images/logo.png'
+import logo from '@/public/images/logo-big.png'
 import Image from 'next/image'
 import Marquee from 'react-fast-marquee'
 import MarqueeComponent from '../marqueeElement'
@@ -17,9 +17,10 @@ export default function Header() {
               <Link href="/" className="block" aria-label="Value1">
                 <Image
                   src={logo}
-                  width={80}
-                  height={80}
+                  width={100}
+                  height={100}
                   alt="Value1 Branding"
+                  className='object-contain'
                 />
               </Link>
             </div>
