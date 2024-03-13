@@ -1,6 +1,6 @@
 import './css/style.css'
 
-import { Inter, Architects_Daughter } from 'next/font/google'
+import { Inter, Rubik } from 'next/font/google'
 
 import Header from '@/components/ui/header'
 
@@ -10,10 +10,9 @@ const inter = Inter({
   display: 'swap'
 })
 
-const architects_daughter = Architects_Daughter({
+const rubik = Rubik({
   subsets: ['latin'],
-  variable: '--font-architects-daughter',
-  weight: '400',
+  variable: '--font-rubik',
   display: 'swap'
 })
 
@@ -29,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${architects_daughter.variable} font-inter antialiased bg-black-800 text-gray-200 tracking-tight`}>
+      <body className={`${inter.variable} ${rubik.variable} font-inter antialiased bg-black-800 text-gray-200 tracking-tight`}>
         <div className="flex flex-col min-h-screen overflow-hidden gold-background">
           <Header />
           {children}

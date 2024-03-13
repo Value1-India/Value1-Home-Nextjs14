@@ -10,14 +10,16 @@ import Zigzag from '@/components/zigzag'
 import Testimonials from '@/components/testimonials'
 import Advantage from '@/components/advantage'
 import GetStarted from '@/components/get-started'
+import Partners from '@/components/partners'
 
 export default function Home() {
   return (
     <>
-         <Hero />
+        <Hero />
         <Features />
         <Advantage />
         <GetStarted />
+        <Partners />
         {/* <Zigzag />
         <Testimonials />
         <Newsletter /> */}

@@ -1,21 +1,27 @@
 import Image from "next/image"
-import Buy from '@/public/images/Buy infographics.svg';
-import Sell from '@/public/images/Sell Infographics.svg'
+import Buy from '@/public/images/Chart Value1.png';
+import Sell from '@/public/images/Chart Value2.png'
 export default function Features() {
   return (
     <section>
       <div className="max-w-8xl px-4">
-        <div className="py-12 md:py-20 h-5/6">
+        <div className="py-12 h-5/6">
 
           {/* Section header */}
-          <div className="w-full mx-auto text-center pb-6 md:pb-20">
-            <h2 className="mb-4 font-bold text-4xl md:text-7xl ">Get Started</h2>
+          <div className="w-full mx-auto text-center pb-6">
+            <h2 className="mb-4 font-bold text-2xl md:text-3xl lg:text-7xl ">Start investing at <span className="text-gold-500 px-3 md:px-0">Value1</span> </h2>
           </div>
 
           {/* Items */}
-          <div className="flex flex-col items-center justify-center md:flex-row">
-           <div><Image src={Buy} alt="Buying methods at Value1" className="buy-element" /></div>
-           <div><Image src={Sell} alt="Selling methods at Value1" className="sell-element"/></div>
+          <div className="flex flex-col items-center justify-center gap-6 px-2 md:flex-row">
+            <div className="text-center font-bold text-xl text-gold-800">
+              <h3>Buying @Value1</h3>
+              <Image src={Buy} width={450} height={450} alt="Buying methods at Value1" className="p-4 max-w-xs md:max-w-full" />
+            </div>
+            <div className="text-center font-bold text-xl text-gold-800">
+              <h3>Selling @Value1</h3>
+              <Image src={Sell} width={450} height={450} alt="Selling methods at Value1" className="p-4 max-w-xs md:max-w-full" />
+            </div>
           </div>
 
         </div>
