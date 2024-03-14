@@ -7,6 +7,7 @@ import 'aos/dist/aos.css'
 
 import PageIllustration from '@/components/page-illustration'
 import Footer from '@/components/ui/footer'
+import ScrollToTop from '@/components/ui/Scroll2Top'
 
 export default function DefaultLayout({
   children,
@@ -33,8 +34,8 @@ export default function DefaultLayout({
         {children}
 
       </main>
-
       <Footer />
+      <ScrollToTop />
     </>
   )
 }

@@ -207,7 +207,7 @@ export default function RateCard({ goldRate, silverRate }: RateCardProps): JSX.E
               <label htmlFor="rupeesInput" className="text text-xs md:text-sm font-normal bg-white text-black-500">Rupees</label>
               <CurrencyInput
                 id="rupeesInput"
-                className='input form-input text-black-700 text-md focus:outline-none w-40 p-2'
+                className='input form-input text-black-700 text-md focus:outline-none focus:ring-1 focus:ring-gold-500 w-40 p-2'
                 name="rupees"
                 placeholder="₹"
                 value={rupeesValue || ''}
@@ -222,7 +222,7 @@ export default function RateCard({ goldRate, silverRate }: RateCardProps): JSX.E
               <label htmlFor="gramsInput" className="text text-xs md:text-sm font-normal bg-white text-black-500">Grams</label>
               <CurrencyInput
                 id="gramsInput"
-                className='input form-input text-black-700 text-md focus:outline-none w-40 p-2'
+                className='input form-input text-black-700 text-md focus:outline-none focus:ring-1 focus:ring-gold-500 w-40 p-2'
                 name="grams"
                 placeholder="g"
                 value={gramsValue || ''}
@@ -232,20 +232,20 @@ export default function RateCard({ goldRate, silverRate }: RateCardProps): JSX.E
             </div>
           </form>
           <div className='flex flex-wrap md:flex-nowrap flex-row gap-1 md:gap-8 my-4 md:my-8 items-center justify-center md:justify-between'>
-            <div className='w-max font-medium text-black-400 rounded-lg bg-gold-200 px-2 py-1 md:px-4 md:py-2 active:bg-gold-400 cursor-pointer' onClick={() => handleCommonButtonClick(activeInput === 'rupees' ? 100 : 1)}>
+            <div className='btn w-max font-medium text-black-400 rounded-lg bg-gold-200 px-2 py-1 md:px-4 md:py-2 hover:bg-gold-400 cursor-pointer' onClick={() => handleCommonButtonClick(activeInput === 'rupees' ? 100 : 1)}>
               {activeInput === 'rupees' ? '₹100' : '1g'}
             </div>
-            <div className='w-max font-medium text-black-400 rounded-lg bg-gold-200 px-2 py-1 md:px-4 md:py-2 active:bg-gold-400 cursor-pointer' onClick={() => handleCommonButtonClick(activeInput === 'rupees' ? 500 : 10)}>
+            <div className='btn w-max font-medium text-black-400 rounded-lg bg-gold-200 px-2 py-1 md:px-4 md:py-2 hover:bg-gold-400 cursor-pointer' onClick={() => handleCommonButtonClick(activeInput === 'rupees' ? 500 : 10)}>
               {activeInput === 'rupees' ? '₹500' : '10g'}
             </div>
-            <div className='w-max font-medium text-black-400 rounded-lg bg-gold-200 px-2 py-1 md:px-4 md:py-2 active:bg-gold-400 cursor-pointer' onClick={() => handleCommonButtonClick(activeInput === 'rupees' ? 1000 : 50)}>
+            <div className='btn w-max font-medium text-black-400 rounded-lg bg-gold-200 px-2 py-1 md:px-4 md:py-2 hover:bg-gold-400 cursor-pointer' onClick={() => handleCommonButtonClick(activeInput === 'rupees' ? 1000 : 50)}>
               {activeInput === 'rupees' ? '₹1000' : '50g'}
             </div>
-            <div className='w-max font-medium text-black-400 rounded-lg bg-gold-200 px-2 py-1 md:px-4 md:py-2 active:bg-gold-400 cursor-pointer' onClick={() => handleCommonButtonClick(activeInput === 'rupees' ? 5000 : 100)}>
+            <div className='btn w-max font-medium text-black-400 rounded-lg bg-gold-200 px-2 py-1 md:px-4 md:py-2 hover:bg-gold-400 cursor-pointer' onClick={() => handleCommonButtonClick(activeInput === 'rupees' ? 5000 : 100)}>
               {activeInput === 'rupees' ? '₹5000' : '100g'}
             </div>
           </div>
-          <button className='w-20 p-1 md:w-32 md:mb-2 md:px-6 md:py-3 bg-gold-500 text-black-700 font-bold text-lg md:text-xl rounded-xl active:bg-gold-600'>
+          <button className='btn w-20 p-1 md:w-32 md:mb-2 md:px-6 md:py-3 bg-gold-500 text-black-700 font-bold text-lg md:text-xl rounded-xl hover:bg-gold-600'>
           {chooseOption === 'buy' ? 'Buy' : 'Sell'}
         </button>
         </div>

@@ -18,7 +18,7 @@ export default function Hero() {
           {/* Section header */}
           <div className="max-w-full flex flex-wrap flex-col-reverse lg:flex-row lg:flex-nowrap items-center justify-around mx-auto text-center pb-4">
             
-            <div className='hero-section w-full md:w-4/6 px-8 mt-8 lg:mt-0'>
+            <div className='hero-section w-full max-w-2xl md:w-4/6 px-8 mt-8 lg:mt-0'>
               {/* <div>
                 <Image src={heroFg} width={2500} alt='' />
               </div> */}
