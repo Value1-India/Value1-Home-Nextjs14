@@ -1,11 +1,14 @@
+'use client'
 import Link from 'next/link'
 import MobileMenu from './mobile-menu'
 import logo from '@/public/images/logo-big.png'
 import Image from 'next/image'
 import Marquee from 'react-fast-marquee'
 import MarqueeComponent from '../marqueeElement'
+import React, { useState } from 'react';
 
 export default function Header() {
+  const [selectedLink, setSelectedLink] = useState('page1');
   return (
     <header className="absolute w-full z-30 overflow-x-hidden ">
       <div className='fixed bg-black-800'>
@@ -31,7 +34,8 @@ export default function Header() {
                 <li>
                   <Link
                     href="/"
-                    className="font-semibold text-white text-md hover:text-gold-500 px-3 lg:px-8 py-3 flex items-center transition duration-250 ease-in-out"
+                    className={`${selectedLink === 'page1' ? 'text-gold-500' : 'text-white'} font-semibold  text-md hover:text-gold-500 px-3 lg:px-8 py-3 flex items-center transition duration-250 ease-in-out`}
+                    onClick={() => setSelectedLink('page1')}
                   >
                     Home
                   </Link>
@@ -39,7 +43,8 @@ export default function Header() {
                 <li>
                   <Link
                     href="/how-it-works"
-                    className="font-semibold text-white text-md hover:text-gold-500 px-3 lg:px-8 py-3 flex items-center transition duration-250 ease-in-out"
+                    className={`${selectedLink === 'page2' ? 'text-gold-500' : 'text-white'} font-semibold text-md hover:text-gold-500 px-3 lg:px-8 py-3 flex items-center transition duration-250 ease-in-out`}
+                    onClick={() => setSelectedLink('page2')}
                   >
                     How it Works?
                   </Link>
@@ -47,7 +52,8 @@ export default function Header() {
                 <li>
                   <Link
                     href="/about"
-                    className="font-semibold text-white text-md hover:text-gold-500 px-3 lg:px-8 py-3 flex items-center transition duration-250 ease-in-out"
+                    className={`${selectedLink === 'page3' ? 'text-gold-500' : 'text-white'} font-semibold text-md hover:text-gold-500 px-3 lg:px-8 py-3 flex items-center transition duration-250 ease-in-out`}
+                    onClick={() => setSelectedLink('page3')}
                   >
                     About
                   </Link>
@@ -55,7 +61,8 @@ export default function Header() {
                 <li>
                   <Link
                     href="#"
-                    className="font-semibold text-white text-md hover:text-gold-500 px-3 lg:px-8 flex items-center transition duration-250 ease-in-out"
+                    className={`${selectedLink === 'page4' ? 'text-gold-500' : 'text-white'} font-semibold text-md hover:text-gold-500 px-3 lg:px-8 py-3 flex items-center transition duration-250 ease-in-out`}
+                    onClick={() => setSelectedLink('page4')}
                   >
                     Community
                   </Link>
