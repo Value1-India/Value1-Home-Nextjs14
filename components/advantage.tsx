@@ -35,6 +35,7 @@ export default function Advantage() {
   return (
     <section>
       <div className="max-w-full px-4">
+        <PageIllustration />
         <div className="py-12 h-5/6 flex flex-col items-center justify-center">
 
           {/* Section header */}
@@ -79,6 +80,7 @@ export default function Advantage() {
           </div>
 
         </div>
+        <PageIllustration className='transform rotate-180' />
       </div>
     </section>
   )

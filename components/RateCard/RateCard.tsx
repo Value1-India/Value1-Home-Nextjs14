@@ -184,7 +184,7 @@ export default function RateCard({ goldRate, silverRate }: RateCardProps): JSX.E
           </div>
           <div className='font-medium text-white py-3 lg:text-4xl text-3xl md:py-3'>&#8377;{calculateFinalRate()}/g</div>
           <div className='flex items-center justify-center gap-3 pb-2 text-black-700 font-medium text-sm md:text-md lg:text-lg'> {/* live rate animation */}
-            <div className='bg-red-600 rounded-full animate-pulse w-2 h-2'></div>
+            <div className='bg-red-600 rounded-full animate-ping w-2 h-2'></div>
             <div>Live Rates</div>
           </div>
           {chooseOption === 'buy' && <div className='font-light text-white text-xs md:text-sm'>* Additional 3% GST applicable</div>}
@@ -192,7 +192,7 @@ export default function RateCard({ goldRate, silverRate }: RateCardProps): JSX.E
 
         {/* Buy/Sell section and other components remain unchanged */}
         <div className='flex flex-col items-center justify-center pb-2'>{/* Buy/Sell section */}
-          <div className='w-full flex items-center justify-between text-white mb-2 md:mb-4 bg-gold-800'>
+          <div className='w-full flex items-center justify-between text-center text-white mb-2 md:mb-4 bg-gold-700'>
             <div className={`w-full px-4 cursor-pointer ${chooseOption === 'buy' ? 'text-gold-500 bg-black-500': ''}`} onClick={() => handleOptionClick('buy')}>
               <div className='py-2 md:py-3 font-semibold md:text-xl md:font-bold'>Buy</div>
             </div>
