@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import logo from '@/public/images/logo.png'
+import logo from '@/public/images/logo-big.png'
 
 
 export default function Footer() {
@@ -20,8 +20,8 @@ export default function Footer() {
                 <Link href="/" className="inline-block" aria-label="Value1">
                   <Image
                     src={logo}
-                    width={80}
-                    height={80}
+                    width={150}
+                    height={150}
                     alt="Value1 Branding"
                   />
                 </Link>

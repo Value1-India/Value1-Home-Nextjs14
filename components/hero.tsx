@@ -16,9 +16,9 @@ export default function Hero() {
         <div className="relative pt-40 pb-4">
 
           {/* Section header */}
-          <div className="max-w-full flex flex-wrap flex-col lg:flex-row lg:flex-nowrap items-center justify-around mx-auto text-center pb-4">
+          <div className="max-w-full flex flex-wrap flex-col-reverse lg:flex-row lg:flex-nowrap items-center justify-around mx-auto text-center pb-4">
             
-            <div className='hero-section w-full md:w-4/6 px-8'>
+            <div className='hero-section w-full md:w-4/6 px-8 mt-8 lg:mt-0'>
               {/* <div>
                 <Image src={heroFg} width={2500} alt='' />
               </div> */}
@@ -34,7 +34,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <div className='w-full overflow-hidden md:w-2/3 lg:w-7/12 xl:w-5/12 md:px-4 px-2' data-aos='fade-left' data-aos-delay='300'>
+            <div className='max-w-lg w-full overflow-hidden md:px-4 px-2' data-aos='fade-left' data-aos-delay='300'> {/*md:w-2/3 lg:w-7/12 xl:w-5/12*/}
               <RateCard goldRate={goldRate} silverRate={silverRate} />
             </div>
 

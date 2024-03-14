@@ -171,85 +171,84 @@ export default function RateCard({ goldRate, silverRate }: RateCardProps): JSX.E
 
 
   return (
-    <div className='w-full xl:w-5/6 h-full bg-white rounded-3xl mt-6 lg:mt-0 overflow-hidden border-2 md:border-4 border-white'>
-      <div className='flex flex-col justify-center items-center py-4 bg-gold-600'>{/* live price section */}
-        <div className='flex items-center justify-around text-black-800 gap-2 md:gap-4'>
-          <div className={`px-2 md:px-4 cursor-pointer ${chooseMetal === 'gold' ? 'text-white border-b-4 rounded border-white' : ''}`} onClick={() => handleMetalClick('gold')}>
-            <div className='mb-1 text-md font-semibold md:mb-2 md:text-2xl md:font-bold'>Gold</div>
+    <div className='flex justify-center'>
+      <div className='w-full max-w-xs md:max-w-md h-full bg-white rounded-3xl overflow-hidden border-2 md:border-4 border-white'>
+        <div className='flex flex-col justify-center items-center py-4 bg-gold-600'>{/* live price section */}
+          <div className='flex items-center justify-around text-black-800 gap-2 md:gap-4'>
+            <div className={`px-2 md:px-4 cursor-pointer ${chooseMetal === 'gold' ? 'text-white border-b-4 rounded border-white' : ''}`} onClick={() => handleMetalClick('gold')}>
+              <div className='mb-1 text-md font-semibold md:mb-2 md:text-xl md:font-bold'>Gold</div>
+            </div>
+            <div className={`px-2 md:px-4 cursor-pointer ${chooseMetal === 'silver' ? 'text-white border-b-4 rounded border-white' : ''}`} onClick={() => handleMetalClick('silver')}>
+              <div className='mb-1 text-md font-semibold md:mb-2 md:text-xl md:font-bold'>Silver</div>
+            </div>
           </div>
-          <div className={`px-2 md:px-4 cursor-pointer ${chooseMetal === 'silver' ? 'text-white border-b-4 rounded border-white' : ''}`} onClick={() => handleMetalClick('silver')}>
-            <div className='mb-1 text-md font-semibold md:mb-2 md:text-2xl md:font-bold'>Silver</div>
+          <div className='font-medium text-white py-3 lg:text-4xl text-3xl md:py-3'>&#8377;{calculateFinalRate()}/g</div>
+          <div className='flex items-center justify-center gap-3 pb-2 text-black-700 font-medium text-sm md:text-md lg:text-lg'> {/* live rate animation */}
+            <div className='bg-red-600 rounded-full animate-pulse w-2 h-2'></div>
+            <div>Live Rates</div>
           </div>
+          {chooseOption === 'buy' && <div className='font-light text-white text-xs md:text-sm'>* Additional 3% GST applicable</div>}
         </div>
-        <div className='font-medium text-white text-3xl py-3 lg:text-5xl md:text-4xl md:py-5'>&#8377;{calculateFinalRate()}/g</div>
-        <div className='flex items-center justify-center gap-3 pb-3 text-black-700 text-xs md:text-sm'> {/* live rate animation */}
-          <div className='bg-red-600 rounded-full animate-pulse w-2 h-2'></div>
-          <div>Live Rates</div>
+
+        {/* Buy/Sell section and other components remain unchanged */}
+        <div className='flex flex-col items-center justify-center pb-2'>{/* Buy/Sell section */}
+          <div className='w-full flex items-center justify-between text-white mb-2 md:mb-4 bg-gold-800'>
+            <div className={`w-full px-4 cursor-pointer ${chooseOption === 'buy' ? 'text-gold-500 bg-black-500': ''}`} onClick={() => handleOptionClick('buy')}>
+              <div className='py-2 md:py-3 font-semibold md:text-xl md:font-bold'>Buy</div>
+            </div>
+            <div className={`w-full px-4 cursor-pointer ${chooseOption === 'sell' ? 'text-gold-500 bg-black-500' : ''}`} onClick={() => handleOptionClick('sell')}>
+              <div className='py-2 md:py-3 font-semibold md:text-xl md:font-bold'>Sell</div>
+            </div>
+          </div>
+          <div className='text-black-700 font-semibold text-xl md:text-3xl pt-4  '>{activeInput === 'rupees' ? 'Enter the Amount' : 'Enter the Quantity'}</div>
+          {/* <form action="#" method="post" className='flex flex-row justify-between gap-4 items-center'> */}
+          <form id="exchangeForm" action="#" method="post" className={`flex ${activeInput === 'rupees' ? 'flex-col md:flex-row' : 'flex-col-reverse md:flex-row-reverse'} justify-between md:justify-between md:gap-4 items-center px-2`}>
+            <div className="coolinput flex justify-center flex-col">
+              <label htmlFor="rupeesInput" className="text text-xs md:text-sm font-normal bg-white text-black-500">Rupees</label>
+              <CurrencyInput
+                id="rupeesInput"
+                className='input form-input text-black-700 text-md focus:outline-none w-40 p-2'
+                name="rupees"
+                placeholder="₹"
+                value={rupeesValue || ''}
+                onValueChange={(value) => setRupeesValue(value || '')}
+                disabled={activeInput === 'grams'}
+              />
+            </div>
+
+            <Image src={xicon} width={100} height={100} alt='exchange icon' onClick={handleExchangeClick} className='w-6 mt-4 cursor-pointer xs:rotate-90 md:rotate-0 ' />
+
+            <div className="coolinput flex flex-col">
+              <label htmlFor="gramsInput" className="text text-xs md:text-sm font-normal bg-white text-black-500">Grams</label>
+              <CurrencyInput
+                id="gramsInput"
+                className='input form-input text-black-700 text-md focus:outline-none w-40 p-2'
+                name="grams"
+                placeholder="g"
+                value={gramsValue || ''}
+                onValueChange={(value) => setGramsValue(value || '')}
+                disabled={activeInput === 'rupees'}
+              />
+            </div>
+          </form>
+          <div className='flex flex-wrap md:flex-nowrap flex-row gap-1 md:gap-8 my-4 md:my-8 items-center justify-center md:justify-between'>
+            <div className='w-max font-medium text-black-400 rounded-lg bg-gold-200 px-2 py-1 md:px-4 md:py-2 active:bg-gold-400 cursor-pointer' onClick={() => handleCommonButtonClick(activeInput === 'rupees' ? 100 : 1)}>
+              {activeInput === 'rupees' ? '₹100' : '1g'}
+            </div>
+            <div className='w-max font-medium text-black-400 rounded-lg bg-gold-200 px-2 py-1 md:px-4 md:py-2 active:bg-gold-400 cursor-pointer' onClick={() => handleCommonButtonClick(activeInput === 'rupees' ? 500 : 10)}>
+              {activeInput === 'rupees' ? '₹500' : '10g'}
+            </div>
+            <div className='w-max font-medium text-black-400 rounded-lg bg-gold-200 px-2 py-1 md:px-4 md:py-2 active:bg-gold-400 cursor-pointer' onClick={() => handleCommonButtonClick(activeInput === 'rupees' ? 1000 : 50)}>
+              {activeInput === 'rupees' ? '₹1000' : '50g'}
+            </div>
+            <div className='w-max font-medium text-black-400 rounded-lg bg-gold-200 px-2 py-1 md:px-4 md:py-2 active:bg-gold-400 cursor-pointer' onClick={() => handleCommonButtonClick(activeInput === 'rupees' ? 5000 : 100)}>
+              {activeInput === 'rupees' ? '₹5000' : '100g'}
+            </div>
+          </div>
+          <button className='w-20 p-1 md:w-32 md:mb-2 md:px-6 md:py-3 bg-gold-500 text-black-700 font-bold text-lg md:text-xl rounded-xl active:bg-gold-600'>
+          {chooseOption === 'buy' ? 'Buy' : 'Sell'}
+        </button>
         </div>
-        {chooseOption === 'buy' && <div className='font-light text-white text-xs md:text-sm'>* Additional 3% GST applicable</div>}
-      </div>
-
-      {/* Buy/Sell section and other components remain unchanged */}
-      <div className='flex flex-col items-center justify-center pb-2'>{/* Buy/Sell section */}
-        <div className='w-full flex items-center justify-between text-white mb-2 md:mb-4 bg-gold-800'>
-          <div className={`w-full px-4 cursor-pointer ${chooseOption === 'buy' ? 'text-gold-500 bg-black-500': ''}`} onClick={() => handleOptionClick('buy')}>
-            <div className='py-2 md:py-3 text-xl md:text-2xl font-bold'>Buy</div>
-          </div>
-          <div className={`w-full px-4 cursor-pointer ${chooseOption === 'sell' ? 'text-gold-500 bg-black-500' : ''}`} onClick={() => handleOptionClick('sell')}>
-            <div className='py-2 md:py-3 text-xl md:text-2xl font-bold'>Sell</div>
-          </div>
-        </div>
-        <div className='text-black-700 font-semibold text-xl md:text-3xl pt-4  '>Enter the amount</div>
-        {/* <form action="#" method="post" className='flex flex-row justify-between gap-4 items-center'> */}
-        <form id="exchangeForm" action="#" method="post" className={`flex ${activeInput === 'rupees' ? 'flex-col md:flex-row' : 'flex-col-reverse md:flex-row-reverse'} justify-between md:justify-between md:gap-4 items-center px-2`}>
-          <div className="coolinput flex justify-center flex-col">
-            <label htmlFor="rupeesInput" className="text text-xs md:text-sm font-normal bg-white text-black-500">Rupees</label>
-            <CurrencyInput
-              id="rupeesInput"
-              className='input form-input text-black-700 text-md focus:outline-none w-40 p-2'
-              name="rupees"
-              placeholder="₹"
-              value={rupeesValue || ''}
-              onValueChange={(value) => setRupeesValue(value || '')}
-              disabled={activeInput === 'grams'}
-            />
-
-            {/* <input type="text" id="rupeesInput" value={rupeesValue} onChange={(e) => setRupeesValue(e.target.value)} className="input form-input text-black-700 text-md focus:outline-none w-40" /> */}
-          </div>
-
-          <Image src={xicon} width={100} height={100} alt='exchange icon' onClick={handleExchangeClick} className='w-6 mt-4 cursor-pointer xs:rotate-90 md:rotate-0 ' />
-
-          <div className="coolinput flex flex-col">
-            <label htmlFor="gramsInput" className="text text-xs md:text-sm font-normal bg-white text-black-500">Grams</label>
-            <CurrencyInput
-              id="gramsInput"
-              className='input form-input text-black-700 text-md focus:outline-none w-40 p-2'
-              name="grams"
-              placeholder="g"
-              value={gramsValue || ''}
-              onValueChange={(value) => setGramsValue(value || '')}
-              disabled={activeInput === 'rupees'}
-            />
-            {/* <input type="text" id="gramsInput" value={gramsValue} onChange={(e) => setGramsValue(e.target.value)} className="input form-input text-black-700 text-md focus:outline-none w-40" /> */}
-          </div>
-        </form>
-        <div className='flex flex-wrap md:flex-nowrap flex-row gap-1 md:gap-8 my-4 md:my-8 items-center justify-center md:justify-between'>
-          <div className='w-max font-medium text-black-400 rounded-lg bg-gold-200 px-2 py-1 md:px-4 md:py-2 active:bg-gold-400 cursor-pointer' onClick={() => handleCommonButtonClick(activeInput === 'rupees' ? 100 : 1)}>
-            {activeInput === 'rupees' ? '₹100' : '1g'}
-          </div>
-          <div className='w-max font-medium text-black-400 rounded-lg bg-gold-200 px-2 py-1 md:px-4 md:py-2 active:bg-gold-400 cursor-pointer' onClick={() => handleCommonButtonClick(activeInput === 'rupees' ? 500 : 10)}>
-            {activeInput === 'rupees' ? '₹500' : '10g'}
-          </div>
-          <div className='w-max font-medium text-black-400 rounded-lg bg-gold-200 px-2 py-1 md:px-4 md:py-2 active:bg-gold-400 cursor-pointer' onClick={() => handleCommonButtonClick(activeInput === 'rupees' ? 1000 : 50)}>
-            {activeInput === 'rupees' ? '₹1000' : '50g'}
-          </div>
-          <div className='w-max font-medium text-black-400 rounded-lg bg-gold-200 px-2 py-1 md:px-4 md:py-2 active:bg-gold-400 cursor-pointer' onClick={() => handleCommonButtonClick(activeInput === 'rupees' ? 5000 : 100)}>
-            {activeInput === 'rupees' ? '₹5000' : '100g'}
-          </div>
-        </div>
-        <button className='w-20 p-1 md:w-32 md:mb-2 md:px-6 md:py-3 bg-gold-500 text-black-700 font-bold text-lg md:text-xl rounded-xl active:bg-gold-600'>
-        {chooseOption === 'buy' ? 'Buy' : 'Sell'}
-      </button>
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ export default function Header() {
     <header className="absolute w-full z-30 overflow-x-hidden ">
       <div className='fixed bg-black-800'>
         <div className="w-full mx-auto border-b-2 border-white px-6">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-20 md:mx-2 lg:mx-12 xl:mx-20 2xl:mx-40">
             {/* Site branding */}
             <div className="shrink-0 px-4">
               {/* Logo */}
@@ -18,7 +18,6 @@ export default function Header() {
                 <Image
                   src={logo}
                   width={100}
-                  height={100}
                   alt="Value1 Branding"
                   className='object-contain'
                 />
@@ -32,7 +31,7 @@ export default function Header() {
                 <li>
                   <Link
                     href="/"
-                    className="font-semibold text-white text-lg hover:text-gold-500 px-3 lg:px-8 py-3 flex items-center transition duration-250 ease-in-out"
+                    className="font-semibold text-white text-md hover:text-gold-500 px-3 lg:px-8 py-3 flex items-center transition duration-250 ease-in-out"
                   >
                     Home
                   </Link>
@@ -40,7 +39,7 @@ export default function Header() {
                 <li>
                   <Link
                     href="/how-it-works"
-                    className="font-semibold text-white text-lg hover:text-gold-500 px-3 lg:px-8 py-3 flex items-center transition duration-250 ease-in-out"
+                    className="font-semibold text-white text-md hover:text-gold-500 px-3 lg:px-8 py-3 flex items-center transition duration-250 ease-in-out"
                   >
                     How it Works?
                   </Link>
@@ -48,7 +47,7 @@ export default function Header() {
                 <li>
                   <Link
                     href="/about"
-                    className="font-semibold text-white text-lg hover:text-gold-500 px-3 lg:px-8 py-3 flex items-center transition duration-250 ease-in-out"
+                    className="font-semibold text-white text-md hover:text-gold-500 px-3 lg:px-8 py-3 flex items-center transition duration-250 ease-in-out"
                   >
                     About
                   </Link>
@@ -56,7 +55,7 @@ export default function Header() {
                 <li>
                   <Link
                     href="#"
-                    className="font-semibold text-white text-lg hover:text-gold-500 px-3 lg:px-8 flex items-center transition duration-250 ease-in-out"
+                    className="font-semibold text-white text-md hover:text-gold-500 px-3 lg:px-8 flex items-center transition duration-250 ease-in-out"
                   >
                     Community
                   </Link>
@@ -79,10 +78,10 @@ export default function Header() {
         <div className='flex w-screen h-8 bg-gold-800 justify-center'>
           <Marquee speed={80} pauseOnHover pauseOnClick direction='right' loop={0} className='md:w-4/6 w-5/6 bg-gold-800' gradient gradientColor='#977202' gradientWidth={30}>
             <div className='flex flex-row justify-evenly items-center lg:gap-8 gap-2 mx-2'>
-              <MarqueeComponent componentName="Gold" rate={100} marketDifference={1.8} />
-              <MarqueeComponent componentName="Silver" rate={100} marketDifference={-1.5} />
-              <MarqueeComponent componentName="Platinum" rate={100} marketDifference={0.05} />
-              <MarqueeComponent componentName="Rhodium" rate={100} marketDifference={-0.95} />
+              <MarqueeComponent componentName="Gold" rate={6713.44} marketDifference={1.8} />
+              <MarqueeComponent componentName="Silver" rate={76.44} marketDifference={-1.5} />
+              <MarqueeComponent componentName="Platinum" rate={2990.73} marketDifference={0.05} />
+              <MarqueeComponent componentName="Palladium" rate={3426.67} marketDifference={-0.95} />
             </div>
           </Marquee>
         </div>
