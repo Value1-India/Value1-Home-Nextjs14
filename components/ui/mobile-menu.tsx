@@ -5,9 +5,15 @@ import Link from 'next/link'
 
 export default function MobileMenu() {
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false)
+  const [selectedLink, setSelectedLink] = useState('page1');
 
   const trigger = useRef<HTMLButtonElement>(null)
   const mobileNav = useRef<HTMLDivElement>(null)
+
+  const handleLinkClick = (link: string) => {
+    setSelectedLink(link);
+    setMobileNavOpen(false);
+  };
 
   // close the mobile menu on click outside
   useEffect(() => {
@@ -29,6 +35,18 @@ export default function MobileMenu() {
     document.addEventListener('keydown', keyHandler)
     return () => document.removeEventListener('keydown', keyHandler)
   })
+
+  useEffect(() => {
+    const layoutFrame = document.querySelector('.layout-frame');
+    const navFrame = document.querySelector('.nav-frame');
+    if (mobileNavOpen && layoutFrame && navFrame) {
+      layoutFrame.classList.add('blur');
+      navFrame.classList.add('no-blur');
+    } else if (layoutFrame && navFrame) {
+      layoutFrame.classList.remove('blur');
+      navFrame.classList.remove('no-blur');
+    }
+  }, [mobileNavOpen]);
 
   return (
     <div className="md:hidden">
@@ -56,14 +74,15 @@ export default function MobileMenu() {
       <nav
         id="mobile-nav"
         ref={mobileNav}
-        className="absolute top-full z-20 left-0 w-full mt-4 px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out"
+        className={`nav-frame flex justify-center absolute top-52 z-20 left-0 w-full mt-4 px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out`}
         style={mobileNavOpen ? { maxHeight: mobileNav.current?.scrollHeight, opacity: 1 } : { maxHeight: 0, opacity: 0.8 }}
       >
-        <ul className="bg-black-800 px-4 py-2 flex flex-col justify-center items-center">
+        <ul className="bg-black-800 px-4 py-2 max-w-xs w-full flex flex-col justify-center items-center rounded-2xl shadow-xl">
           <li>
             <Link
               href="/"
-              className="font-semibold text-gray-700 hover:text-gold-500 px-8 py-5 flex items-center  transition duration-250 ease-in-out"  onClick={() => setMobileNavOpen(false)}
+              className={`${selectedLink === 'page1' ? 'text-gold-500' : 'text-white'} font-semibold hover:text-gold-500 px-8 py-5 flex items-center  transition duration-250 ease-in-out`}  
+              onClick={() => handleLinkClick('page1')}
             >
               Home
             </Link>
@@ -71,7 +90,8 @@ export default function MobileMenu() {
           <li>
             <Link
               href="/how-it-works"
-              className="font-semibold text-gray-700 hover:text-gold-500 px-8 py-5 flex items-center justify-center transition duration-250 ease-in-out"  onClick={() => setMobileNavOpen(false)}
+              className={`${selectedLink === 'page2' ? 'text-gold-500' : 'text-white'} font-semibold hover:text-gold-500 px-8 py-5 flex items-center  transition duration-250 ease-in-out`}  
+              onClick={() => handleLinkClick('page2')}
             >
               How it Works?
             </Link>
@@ -79,7 +99,8 @@ export default function MobileMenu() {
           <li>
             <Link
               href="/about"
-              className="font-semibold text-gray-700 hover:text-gold-500 px-8 py-5 flex items-center justify-center transition duration-250 ease-in-out"  onClick={() => setMobileNavOpen(false)}
+              className={`${selectedLink === 'page3' ? 'text-gold-500' : 'text-white'} font-semibold hover:text-gold-500 px-8 py-5 flex items-center  transition duration-250 ease-in-out`}  
+              onClick={() => handleLinkClick('page3')}
             >
               About
             </Link>
@@ -87,7 +108,8 @@ export default function MobileMenu() {
           <li>
             <Link
               href="#"
-              className="font-semibold text-gray-700 hover:text-gold-500 px-8 py-5 flex items-center justify-center transition duration-250 ease-in-out"  onClick={() => setMobileNavOpen(false)}
+              className={`${selectedLink === 'page4' ? 'text-gold-500' : 'text-white'} font-semibold hover:text-gold-500 px-8 py-5 flex items-center  transition duration-250 ease-in-out`}  
+              onClick={() => handleLinkClick('page4')}
             >
               Community
             </Link>
@@ -95,7 +117,7 @@ export default function MobileMenu() {
           <li>
             <Link
               href="#"
-              className="font-medium w-32 inline-flex items-center justify-center border border-transparent px-4 py-2 mb-4 my-2 rounded-sm text-black-800 bg-gold-500 hover:bg-gold-400 active:scale-95 transition duration-150 ease-in-out" onClick={() => setMobileNavOpen(false)}
+              className="font-medium w-32 rounded-xl inline-flex items-center justify-center border border-transparent px-4 py-2 mb-4 my-2 text-black-800 bg-gold-500 hover:bg-gold-400 active:scale-95 transition duration-150 ease-in-out" onClick={() => setMobileNavOpen(false)}
             >
               Sign up
             </Link>

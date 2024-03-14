@@ -126,3 +126,9 @@ html{
       transform: rotate(360deg);
   }
 }
+
+
+.no-blur{
+  filter: none !important;
+  -webkit-filter: none !important;
+}
