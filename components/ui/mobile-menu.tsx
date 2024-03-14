@@ -74,7 +74,7 @@ export default function MobileMenu() {
       <nav
         id="mobile-nav"
         ref={mobileNav}
-        className={`nav-frame flex justify-center absolute top-52 z-20 left-0 w-full mt-4 px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out`}
+        className={`nav-frame flex flex-wrap items-center justify-center absolute top-52 z-20 left-0 w-full mt-4 px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out`}
         style={mobileNavOpen ? { maxHeight: mobileNav.current?.scrollHeight, opacity: 1 } : { maxHeight: 0, opacity: 0.8 }}
       >
         <ul className="bg-black-800 px-4 py-2 max-w-xs w-full flex flex-col justify-center items-center rounded-2xl shadow-xl">
