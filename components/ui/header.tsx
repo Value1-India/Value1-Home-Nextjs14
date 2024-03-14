@@ -39,7 +39,7 @@ export default function Header() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/how-it-works"
                     className="font-semibold text-white text-lg hover:text-gold-500 px-3 lg:px-8 py-3 flex items-center transition duration-250 ease-in-out"
                   >
                     How it Works?

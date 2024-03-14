@@ -171,7 +171,7 @@ export default function RateCard({ goldRate, silverRate }: RateCardProps): JSX.E
 
 
   return (
-    <div className='w-full xl:w-5/6 h-full bg-white rounded-3xl mt-24 lg:mt-32 overflow-hidden border-2 md:border-4 border-white'>
+    <div className='w-full xl:w-5/6 h-full bg-white rounded-3xl mt-6 lg:mt-0 overflow-hidden border-2 md:border-4 border-white'>
       <div className='flex flex-col justify-center items-center py-4 bg-gold-600'>{/* live price section */}
         <div className='flex items-center justify-around text-black-800 gap-2 md:gap-4'>
           <div className={`px-2 md:px-4 cursor-pointer ${chooseMetal === 'gold' ? 'text-white border-b-4 rounded border-white' : ''}`} onClick={() => handleMetalClick('gold')}>

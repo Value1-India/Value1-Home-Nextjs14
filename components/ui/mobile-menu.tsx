@@ -62,7 +62,7 @@ export default function MobileMenu() {
         <ul className="bg-black-800 px-4 py-2 flex flex-col justify-center items-center">
           <li>
             <Link
-              href="#"
+              href="/"
               className="font-semibold text-gray-700 hover:text-gold-500 px-8 py-5 flex items-center  transition duration-250 ease-in-out"  onClick={() => setMobileNavOpen(false)}
             >
               Home
@@ -70,7 +70,7 @@ export default function MobileMenu() {
           </li>    
           <li>
             <Link
-              href="#"
+              href="/how-it-works"
               className="font-semibold text-gray-700 hover:text-gold-500 px-8 py-5 flex items-center justify-center transition duration-250 ease-in-out"  onClick={() => setMobileNavOpen(false)}
             >
               How it Works?
