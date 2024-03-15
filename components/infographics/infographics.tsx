@@ -23,7 +23,7 @@ const Infographics = () => {
                 <div className='infographic-section mt-16'>
                     <div className='p-1 step1 relative'>
                         <div className='absolute z-10 top-3 left-5 w-10'><Image src={Pointer} height={100} width={100} alt='Pointer' /></div>
-                        <div className='relative step-container left-16 -top-8 z-0 flex flex-col items-center text-gold-500 px-1 py-1 rounded-xl w-max max-w-xs'>
+                        <div className='relative step-container left-20 -top-8 z-0 flex flex-col items-center text-gold-500 px-1 py-1 rounded-xl w-max max-w-xs'>
                             <div>
                                 <Image src={User} alt='Add User' className='w-12 px-1' />
                             </div>
@@ -34,7 +34,7 @@ const Infographics = () => {
                     <div className='p-1 step2 relative'>
                         <div className='absolute z-10 bg-transparent h-14 -top-[52px] left-[38px] border-2 border-gold-500 border-dashed rounded-full'></div>
                         <div className='absolute z-10 top-3 left-5 w-10'><Image src={Pointer} height={100} width={100} alt='Pointer' /></div>
-                        <div className='relative step-container left-16 -top-8 z-0 flex flex-col items-center text-gold-500 px-1 py-1 rounded-xl w-max max-w-xs'>
+                        <div className='relative step-container left-20 -top-8 z-0 flex flex-col items-center text-gold-500 px-1 py-1 rounded-xl w-max max-w-xs'>
                             <div>
                                 <Image src={User} alt='Add User' className='w-12 px-1' />
                             </div>
@@ -45,7 +45,7 @@ const Infographics = () => {
                     <div className='p-1 step3 relative'>
                         <div className='absolute z-10 bg-transparent h-14 -top-[52px] left-[38px] border-2 border-gold-500 border-dashed rounded-full'></div>
                         <div className='absolute z-10 top-3 left-5 w-10'><Image src={Pointer} height={100} width={100} alt='Pointer' /></div>
-                        <div className='relative step-container left-16 -top-8 z-0 flex flex-col items-center text-gold-500 px-1 py-1 rounded-xl w-max max-w-xs'>
+                        <div className='relative step-container left-20 -top-8 z-0 flex flex-col items-center text-gold-500 px-1 py-1 rounded-xl w-max max-w-xs'>
                             <div>
                                 <Image src={User} alt='Add User' className='w-12 px-1' />
                             </div>
@@ -56,7 +56,7 @@ const Infographics = () => {
                     <div className='p-1 step4 relative flex flex-col '>
                         <div className='absolute z-10 bg-transparent h-14 -top-[52px] left-[38px] border-2 border-gold-500 border-dashed rounded-full'></div>
                         <div className='absolute z-10 top-3 left-5 w-10'><Image src={Pointer} height={100} width={100} alt='Pointer' /></div>
-                        <div className='relative step-container left-16 -top-8 z-0 flex flex-col items-center text-gold-500 px-1 py-1 rounded-xl w-max max-w-xs'>
+                        <div className='relative step-container left-20 -top-8 z-0 flex flex-col items-center text-gold-500 px-1 py-1 rounded-xl w-max max-w-xs'>
                             <div>
                                 <Image src={User} alt='Add User' className='w-12 px-1' />
                             </div>
@@ -79,9 +79,9 @@ const Infographics = () => {
                         <div className='absolute z-10 bg-transparent h-72 -top-[283px] left-[38px] border-2 border-gold-500 border-dashed rounded-full'></div>
                         <div className='absolute z-10 top-3 left-5 w-10'><Image src={Pointer} height={100} width={100} alt='Pointer' /></div>
                         <div className='l1-step1 relative'>
-                            <div className='absolute z-10 bg-transparent w-10 top-[26px] left-[63px] border-2 border-gold-500 border-dashed rounded-full'></div>
-                            <div className='absolute z-10 bg-transparent h-36 -top-[44px] left-[110px] border-2 border-gold-500 border-dashed rounded-full'></div>
-                            <div className='l2-step1 relative left-[72px]'>
+                            <div className='absolute z-10 bg-transparent w-16 top-[26px] left-[63px] border-2 border-gold-500 border-dashed rounded-full'></div>
+                            <div className='absolute z-10 bg-transparent h-36 -top-[44px] left-[135px] border-2 border-gold-500 border-dashed rounded-full'></div>
+                            <div className='l2-step1 relative left-[98px]'>
                                 <div className='child1'>
                                     <div className='absolute z-10 -top-[74px] left-5 w-10'><Image src={Pointer} height={100} width={100} alt='Pointer' /></div>
                                     <div className='relative step-container left-16 -top-24 z-0 flex flex-col items-center text-gold-500 px-1 py-1 rounded-xl w-max max-w-xs'>
@@ -101,10 +101,10 @@ const Infographics = () => {
                                         <div className='font-bold text-sm text-center'>Redeem</div>
                                         <div className='font-light text-white text-xs w-28 text-center'>Redeem your cash into Gold Assets</div>
                                         <div className='l3-step relative flex flex-row'>
-                                            <div className='absolute z-10 bg-transparent h-5 top-[5px] left-[116px] border-2 border-gold-500 border-dashed rounded-full'></div>
-                                            <div className='absolute z-10 bg-transparent w-36 top-[30px] left-[36px] border-2 border-gold-500 border-dashed rounded-full'></div>
-                                            <div className='step-child1 relative top-28'>
-                                                <div className='absolute z-10 -top-[100px] left-4 w-10'><Image src={Pointer} height={100} width={100} alt='Pointer' /></div>
+                                            <div className='absolute z-10 bg-transparent h-8 top-[5px] left-[118px] border-2 border-gold-500 border-dashed rounded-full'></div>
+                                            <div className='absolute z-10 bg-transparent w-36 top-[45px] left-[45px] border-2 border-gold-500 border-dashed rounded-full'></div>
+                                            <div className='step-child1 relative top-32'>
+                                                <div className='absolute z-10 -top-[101px] left-6 w-10'><Image src={Pointer} height={100} width={100} alt='Pointer' /></div>
                                                 <div className='relative step-container -left-5 -top-12 z-0 flex flex-col items-center text-gold-500 px-1 py-1 rounded-xl w-max max-w-xs'>
                                                     <div>
                                                         <Image src={User} alt='Add User' className='w-12 px-1' />
@@ -113,8 +113,8 @@ const Infographics = () => {
                                                     <div className='font-light text-white text-xs w-28 text-center'>Coin Delivery at your Doorstep</div>
                                                 </div>
                                             </div>
-                                            <div className='step-child2 relative top-28'>
-                                                <div className='absolute z-10 -top-[100px] left-10 w-10'><Image src={Pointer} height={100} width={100} alt='Pointer' /></div>
+                                            <div className='step-child2 relative top-32'>
+                                                <div className='absolute z-10 -top-[101px] left-10 w-10'><Image src={Pointer} height={100} width={100} alt='Pointer' /></div>
                                                 <div className='relative step-container left-0 -top-12 z-0 flex flex-col items-center text-gold-500 px-1 py-1 rounded-xl w-max max-w-xs'>
                                                     <div>
                                                         <Image src={User} alt='Add User' className='w-12 px-1' />
@@ -132,7 +132,7 @@ const Infographics = () => {
                     <div className='p-1 step6 mt-12 relative'>
                         <div className='absolute z-10 bg-transparent h-[345px] -top-[335px] left-[38px] border-2 border-gold-500 border-dashed rounded-full'></div>
                         <div className='absolute z-10 top-3 left-5 w-10'><Image src={Pointer} height={100} width={100} alt='Pointer' /></div>
-                        <div className='relative step-container left-16 -top-8 z-0 flex flex-col items-center text-gold-500 px-1 py-1 rounded-xl w-max max-w-xs'>
+                        <div className='relative step-container left-20 -top-8 z-0 flex flex-col items-center text-gold-500 px-1 py-1 rounded-xl w-max max-w-xs'>
                             <div>
                                 <Image src={User} alt='Add User' className='w-12 px-1' />
                             </div>
