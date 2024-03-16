@@ -10,6 +10,10 @@ module.exports = {
     extend: {
       screens :{
         xs: '320px',
+        sm:'375px'
+      },
+      animation:{
+        'single-ping':'ping 1s cubic-bezier(0, 0, 0.2, 1)'
       },
       colors: {
         gold:{
