@@ -5,15 +5,16 @@ import Access247 from '@/public/images/svgs/24-7-access.svg'
 import Support from '@/public/images/svgs/24-hrs-support.svg'
 import AuditCheck from '@/public/images/svgs/audit-check.svg'
 import Bank from '@/public/images/svgs/bank.svg'
-import Piggy from '@/public/images/svgs/piggy-bank.svg'
-import DollarRuppee from '@/public/images/svgs/dollar-rupee-ex.svg'
+import GoldBars from '@/public/images/svgs/gold-bars2.svg'
+import Refinery from '@/public/images/svgs/refinery.svg'
 import Liquidity from '@/public/images/svgs/liquidity.svg'
 import Locker from '@/public/images/svgs/locker.svg'
 import Payment from '@/public/images/svgs/payment.svg'
 import Safe from '@/public/images/svgs/safe.svg'
-import TaxFree from '@/public/images/svgs/tax-free.svg'
-import Trade from '@/public/images/svgs/trade-graph.svg'
+import Award from '@/public/images/svgs/award.svg'
+import Billion from '@/public/images/svgs/billion-dollar.svg'
 import EaseUse from '@/public/images/svgs/ease-use.svg'
+import Share from '@/public/images/svgs/share.svg'
 
 
 export default function Features() {
@@ -31,21 +32,21 @@ export default function Features() {
           <div className="flex flex-col lg:flex-row items-center justify-center md:px-12">
             <div className="flex flex-wrap md:flex-nowrap lg:flex-col items-center justify-evenly md:gap-2 md:justify-between lg:justify-center md:mr-6">
               <MiniCard cardTitle="Low Cost" icon={Coin} description="Take advantage of some of the industry's lowest premiums" />
-              <MiniCard cardTitle="IRA Eligible" icon={Piggy} description="Take advantage of a low-cost, simple IRA solution" />
-              <MiniCard cardTitle="Dollar Cost Average" icon={DollarRuppee} description="Automate a regular investment similar to a corporate 401K plan" />
+              <MiniCard cardTitle="Extra Gold for your GST" icon={GoldBars} description="Celebrate gold ownership with value1, we pay your GST, you save more" />
+              <MiniCard cardTitle="Refining to Retail" icon={Refinery} description="Augmont is India’s largest fully integrated Gold player with a strong presence from refining to retail" />
               <MiniCard cardTitle="24/7 Access" icon={Access247} description="Buy, sell and trade, even when the markets are closed" />
             </div>
             <div className="flex flex-wrap md:flex-nowrap lg:flex-col items-center justify-evenly md:gap-2 md:justify-between lg:justify-center md:mr-6">
-              {/* <MiniCard cardTitle="Low Cost" icon={Coin} description="Take advantage of some of the industry's lowest premiums" /> */}
               <MiniCard cardTitle="Convenient Payments" icon={Payment} description="Pay by ACH, wire, check, credit card, PayPal, and crypto" />
               <MiniCard cardTitle="Physically Secure Locations" icon={Locker} description="Enjoy peace of mind knowing that your metal is stored in highly secure vaults" />
-              <MiniCard cardTitle="Trusted Banking" icon={Bank} description="Founded by top industry leaders with 60+ years of experience" />
+              <MiniCard cardTitle="Government Accredited" icon={Bank} description="Augmont is NABL and BIS accredited and a member of India Good Delivery standard on NSE, BSE and MCX" />
+              <MiniCard cardTitle="$3Bn Revenues" icon={Billion} description="Augmont is one of the top 150 unlisted companies in India – Dun & Bradstreet" />
             </div>
             <div className="flex flex-wrap md:flex-nowrap lg:flex-col items-center justify-evenly md:gap-2 md:justify-between lg:justify-center md:mr-6">
               <MiniCard cardTitle="Direct Ownership" icon={Ownership} description="Have direct title to precious metals, unlike some ETFs" />
               <MiniCard cardTitle="Ease of Use" icon={EaseUse} description="Own precious metals in minutes" />
-              <MiniCard cardTitle="Trade & Speculate" icon={Trade} description="Buy and sell positions in minutes, take advantage of market movements" />
-              <MiniCard cardTitle="No Sales Tax" icon={TaxFree} description="Save on sales tax by buying vaulted metal" />
+              <MiniCard cardTitle="Multi Award Winner" icon={Award} description="2017 to 2021 – Best Gold Seller in India awarded year on year by Bullion Federation Global Convention" />
+              <MiniCard cardTitle="Shareholding" icon={Share} description="Save in gold and co-own the Value1 at no extra cost, India’s 1st customer co-owned gold store" />
             </div>
             <div className="flex flex-wrap md:flex-nowrap lg:flex-col items-center justify-evenly md:gap-2 md:justify-between lg:justify-center md:mr-6">
               <MiniCard cardTitle="Live Support" icon={Support} description="Speak or chat with a representative 5 days a week" />

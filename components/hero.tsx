@@ -39,9 +39,9 @@ export default function Hero() {
               </h1>
               <p className="font-medium text-xl text-gold-600 mb-8" data-aos="fade-up" data-aos-delay="200">World’s 1st Gold Store Co-Owned by its customers like you. </p>
               <p className="text-xl text-gold-600 mb-8" data-aos="fade-up" data-aos-delay="220">Buy 24k 999 Pure Digital Gold online at the best prices from the comforts of your home</p>
-              <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
+              <div className="max-w-xs mx-auto sm:max-w-none sm:flex items-center sm:justify-center">
                 <div data-aos="fade-up" data-aos-delay="400">
-                  <a className="btn text-white rounded-xl bg-gold-600 hover:bg-gold-700 w-full mb-4 sm:w-auto sm:mb-0" href="#">Join @Value1</a>
+                  <a className="btn text-white rounded-xl bg-gold-600 hover:bg-gold-700 w-full mb-4 sm:w-40 text-center sm:mb-0" href="#">Start saving Gold now!</a>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="600">
                   <a className="btn text-white rounded-xl bg-transparent border-2 border-gold-600 hover:bg-gold-700 w-full sm:w-auto sm:ml-4" href="#features">Learn more</a>

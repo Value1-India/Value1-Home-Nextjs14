@@ -15,11 +15,11 @@ export default function Features() {
           {/* Items */}
           <div className="flex flex-col items-center justify-center gap-6 px-2 md:flex-row">
             <div className="text-center font-bold text-xl text-gold-800" data-aos='fade-in' data-aos-delay='300'>
-              <h3>Buying @Value1</h3>
+              <h3>Buying from Value1</h3>
               <Image src={Buy} width={450} height={450} alt="Buying methods at Value1" className="p-4 max-w-xs md:max-w-full" />
             </div>
             <div className="text-center font-bold text-xl text-gold-800" data-aos='fade-in' data-aos-delay='300'>
-              <h3>Selling @Value1</h3>
+              <h3>Selling at Value1</h3>
               <Image src={Sell} width={450} height={450} alt="Selling methods at Value1" className="p-4 max-w-xs md:max-w-full" />
             </div>
           </div>

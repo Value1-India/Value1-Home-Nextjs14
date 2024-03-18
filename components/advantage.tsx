@@ -23,7 +23,7 @@ function createData(
 
 const rows = [
   createData('Ownership of hard asset?', 'Yes', 'No', 'No', 'Yes'),
-  createData('<Content>', 'Yes', 'No', 'No', 'No'),
+  createData('Shareholding in Value1?', 'Yes', 'No', 'No', 'No'),
   createData('Low entry cost?', 'Yes', 'No', 'No', 'No'),
   createData('Is it secure?', 'Yes', 'Yes', 'Yes', 'No'),
   createData('Is quality guaranteed?', 'Yes', 'Yes', 'Yes', 'No'),
