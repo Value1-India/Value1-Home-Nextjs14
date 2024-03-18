@@ -65,7 +65,7 @@ export const metadata = {
                                 </li>
                             </ul>
                         </div>
-                    P</div>
+                    </div>
                     <div className='flex items-center justify-center py-4'>
                         <div className='max-w-5xl'>
                             <div className='font-medium underline text-center md:text-lg'>Why Co-Own With Us?</div>
