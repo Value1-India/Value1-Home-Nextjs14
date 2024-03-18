@@ -87,6 +87,9 @@ module.exports = {
       },
       maxWidth: {
         'max-w-8xl': '88rem'
+      },
+      zIndex:{
+        '-z-100':'-100'
       }
     },
   },

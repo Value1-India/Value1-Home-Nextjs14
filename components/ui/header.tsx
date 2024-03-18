@@ -85,6 +85,24 @@ export default function Header() {
                     className={`${selectedLink === 'page4' ? 'text-gold-500' : 'text-white'} font-semibold text-md hover:text-gold-500 px-3 lg:px-8 py-3 flex items-center transition duration-250 ease-in-out`}
                     onClick={() => setSelectedLink('page4')}
                   >
+                    Co-Own
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className={`${selectedLink === 'page5' ? 'text-gold-500' : 'text-white'} font-semibold text-md hover:text-gold-500 px-3 lg:px-8 py-3 flex items-center transition duration-250 ease-in-out`}
+                    onClick={() => setSelectedLink('page5')}
+                  >
+                    Blog
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className={`${selectedLink === 'page6' ? 'text-gold-500' : 'text-white'} font-semibold text-md hover:text-gold-500 px-3 lg:px-8 py-3 flex items-center transition duration-250 ease-in-out`}
+                    onClick={() => setSelectedLink('page6')}
+                  >
                     Community
                   </Link>
                 </li>
