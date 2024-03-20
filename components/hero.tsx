@@ -3,11 +3,12 @@ import RateCard from './RateCard/RateCard'
 import Image from 'next/image'
 import heroFg from '@/public/images/herosection.png'
 import { ReactTyped } from 'react-typed'
+import fd from '@/utils/ContextProvider'
 
 export default function Hero() {
 
-  var goldRate = '6748.79'
-  var silverRate = '75.26'
+  var goldRate = fd.AugmontGold
+  var silverRate = fd.AugmontSilver
 
   return (
     <section>
@@ -41,7 +42,7 @@ export default function Hero() {
               <p className="text-xl text-gold-600 mb-8" data-aos="fade-up" data-aos-delay="220">Buy 24k 999 Pure Digital Gold online at the best prices from the comforts of your home</p>
               <div className="max-w-xs mx-auto sm:max-w-none sm:flex items-center sm:justify-center">
                 <div data-aos="fade-up" data-aos-delay="400">
-                  <a className="btn text-white rounded-xl bg-gold-600 hover:bg-gold-700 w-full mb-4 sm:w-40 text-center sm:mb-0" href="#">Start saving Gold now!</a>
+                  <a className="btn text-white rounded-xl bg-gold-600 hover:bg-gold-700 w-full mb-4 sm:w-40 lg:w-max text-center sm:mb-0" href="#">Start saving Gold now!</a>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="600">
                   <a className="btn text-white rounded-xl bg-transparent border-2 border-gold-600 hover:bg-gold-700 w-full sm:w-auto sm:ml-4" href="#features">Learn more</a>
@@ -50,7 +51,7 @@ export default function Hero() {
             </div>
 
             <div className='max-w-lg w-full overflow-hidden md:px-4 px-2' data-aos='fade-left' data-aos-delay='300'> {/*md:w-2/3 lg:w-7/12 xl:w-5/12*/}
-              <RateCard goldRate={goldRate} silverRate={silverRate} />
+              <RateCard goldRate={goldRate.toString()} silverRate={silverRate.toString()} />
             </div>
 
           </div>

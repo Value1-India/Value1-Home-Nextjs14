@@ -22,13 +22,16 @@
     "react": "18.2.0",
     "react-currency-input-field": "^3.8.0",
     "react-dom": "18.2.0",
+    "react-easy-swipe": "^0.0.23",
     "react-fast-marquee": "^1.6.4",
     "react-typed": "^2.0.12",
+    "swiper": "^11.0.7",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.7",
     "@types/aos": "^3.0.7",
+    "@types/react-slick": "^0.23.13",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.3.6"

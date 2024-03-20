@@ -17,7 +17,7 @@ module.exports = {
       },
       colors: {
         gold:{
-          100:'#fdd868',
+          100:'#fef2cd',
           200:'#fcd14f',
           300:'#fcca36',
           400:'#fcc41d',

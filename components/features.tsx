@@ -38,13 +38,13 @@ export default function Features() {
             </div>
             <div className="flex flex-wrap md:flex-nowrap lg:flex-col items-center justify-evenly md:gap-2 md:justify-between lg:justify-center md:mr-6">
               <MiniCard cardTitle="Convenient Payments" icon={Payment} description="Pay by ACH, wire, check, credit card, PayPal, and crypto" />
-              <MiniCard cardTitle="Physically Secure Locations" icon={Locker} description="Enjoy peace of mind knowing that your metal is stored in highly secure vaults" />
+              <MiniCard cardTitle="Ease of Use" icon={EaseUse} description="Own precious metals in minutes" />
               <MiniCard cardTitle="Government Accredited" icon={Bank} description="Augmont is NABL and BIS accredited and a member of India Good Delivery standard on NSE, BSE and MCX" />
               <MiniCard cardTitle="$3Bn Revenues" icon={Billion} description="Augmont is one of the top 150 unlisted companies in India – Dun & Bradstreet" />
             </div>
             <div className="flex flex-wrap md:flex-nowrap lg:flex-col items-center justify-evenly md:gap-2 md:justify-between lg:justify-center md:mr-6">
               <MiniCard cardTitle="Direct Ownership" icon={Ownership} description="Have direct title to precious metals, unlike some ETFs" />
-              <MiniCard cardTitle="Ease of Use" icon={EaseUse} description="Own precious metals in minutes" />
+              <MiniCard cardTitle="Physically Secure Locations" icon={Locker} description="Enjoy peace of mind knowing that your metal is stored in highly secure vaults" />
               <MiniCard cardTitle="Multi Award Winner" icon={Award} description="2017 to 2021 – Best Gold Seller in India awarded year on year by Bullion Federation Global Convention" />
               <MiniCard cardTitle="Shareholding" icon={Share} description="Save in gold and co-own the Value1 at no extra cost, India’s 1st customer co-owned gold store" />
             </div>

@@ -22,7 +22,7 @@ const MarqueeComponent: React.FC<MarqueeProps> = ({ componentName, rate, changeP
       {isPositive ? (
         <>
           <span style={{ color: '#80ff80' }} className='pr-1'>▲</span>
-          <span style={{ color: '#80ff80' }}>{marketChange < 0 ? '-' : '+'}{Math.abs(marketChange)}</span>
+          <span style={{ color: '#80ff80' }} className='pr-2'>{marketChange < 0 ? '-' : '+'}{Math.abs(marketChange)}</span>
           <span style={{ color: '#80ff80' }}>({changePercentage < 0 ? '-' : '+'}{Math.abs(changePercentage)}%)</span>
         </>
       ) : (

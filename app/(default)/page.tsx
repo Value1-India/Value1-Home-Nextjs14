@@ -8,6 +8,8 @@ import Features from '@/components/features'
 import Advantage from '@/components/advantage'
 import GetStarted from '@/components/get-started'
 import Partners from '@/components/partners'
+import Testimonials from '@/components/testimonials'
+import FAQmini from '@/components/mini-faq'
 
 export default function Home() {
   return (
@@ -16,10 +18,11 @@ export default function Home() {
         <Features />
         <Advantage />
         <GetStarted />
-        <Partners />
-        {/* <Zigzag />
         <Testimonials />
-        <Newsletter /> */}
+        <FAQmini />
+        <Partners />
+         {/* <Zigzag /> */}
+        {/*<Newsletter /> */}
     </>
   )
 }
