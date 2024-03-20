@@ -29,16 +29,10 @@ export default function FAQ() {
           </div>
 
           <div className="flex flex-row items-center justify-center mt-16">
-            <div className="max-w-sm rounded-lg overflow-x-scroll .faq-scrollbar">
+            <div className="max-w-sm rounded-lg overflow-x-scroll .faq-scrollbar border-2">
               <ul className="flex flex-row items-center justify-evenly gap-4 px-4 py-3 w-max cursor-pointer ">
-                <li className="cursor-pointer p-1 hover:border-b-2 hover:text-gold-500 border-gold-500 rounded-md font-bold text-white" onClick={() => setSelectedSection('first')}>FAQ 1</li>
-                <li className="cursor-pointer p-1 hover:border-b-2 hover:text-gold-500 border-gold-500 rounded-md font-bold text-white" onClick={() => setSelectedSection('second')}>FAQ 2</li>
-                <li className="cursor-pointer p-1 hover:border-b-2 hover:text-gold-500 border-gold-500 rounded-md font-bold text-white" onClick={() => setSelectedSection('first')}>FAQ 1</li>
-                <li className="cursor-pointer p-1 hover:border-b-2 hover:text-gold-500 border-gold-500 rounded-md font-bold text-white" onClick={() => setSelectedSection('second')}>FAQ 2</li>
-                <li className="cursor-pointer p-1 hover:border-b-2 hover:text-gold-500 border-gold-500 rounded-md font-bold text-white" onClick={() => setSelectedSection('first')}>FAQ 1</li>
-                <li className="cursor-pointer p-1 hover:border-b-2 hover:text-gold-500 border-gold-500 rounded-md font-bold text-white" onClick={() => setSelectedSection('second')}>FAQ 2</li>
-                <li className="cursor-pointer p-1 hover:border-b-2 hover:text-gold-500 border-gold-500 rounded-md font-bold text-white" onClick={() => setSelectedSection('first')}>FAQ 1</li>
-                <li className="cursor-pointer p-1 hover:border-b-2 hover:text-gold-500 border-gold-500 rounded-md font-bold text-white" onClick={() => setSelectedSection('second')}>FAQ 2</li>
+                <li className={`${selectedSection === 'first' ? 'text-gold-500 border-b-2' : 'text-white'} cursor-pointer p-1 text-xl text-gold-500 border-gold-500 rounded-md font-bold `} onClick={() => setSelectedSection('first')}>FAQ 1</li>
+                <li className={`${selectedSection === 'second' ? 'text-gold-500 border-b-2' : 'text-white'} cursor-pointer p-1 text-xl text-gold-500 border-gold-500 rounded-md font-bold `} onClick={() => setSelectedSection('second')}>FAQ 2</li>
               </ul>
             </div>
           </div>
@@ -104,5 +98,5 @@ export default function FAQ() {
         </div>
       </div>
     </section>
-  )
+  );
 }
