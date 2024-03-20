@@ -5,11 +5,19 @@ import logo from '@/public/images/logo-big.png'
 import Image from 'next/image'
 import Marquee from 'react-fast-marquee'
 import MarqueeComponent from '../marqueeElement'
+import { useData } from '@/utils/ApiContext';
 import React, { useState } from 'react';
-
 import fd from '@/utils/ContextProvider';
 
 export default function Header() {
+  const { SensexData, Nifty50Data, BSE500Data } = useData();
+  const [selectedLink, setSelectedLink] = useState('page1');
+
+  //console.log('apiData',apiData)
+  //console.log(SensexData)
+  if (!SensexData || !Nifty50Data || !BSE500Data) {
+    return <div>Loading...</div>;
+  }
 
   const data = {
     GoldRate : fd.GoldRate,
@@ -18,18 +26,18 @@ export default function Header() {
     SilverRate: fd.SilverRate,
     SilverRateChange: fd.SilverRateChange,
     SilverRateChangePercentage: fd.SilverRateChangePercentage,
-    SensexPoints: fd.SensexPoints,
-    SensexChange: fd.SensexChange,
-    SensexChangePercentage: fd.SensexChangePercentage,
-    Nifty50Points: fd.Nifty50Points,
-    Nifty50Change: fd.Nifty50Change,
-    Nifty50ChangePercentage: fd.Nifty50ChangePercentage,
-    USD2INR: fd.USD2INR,
-    USD2INRChange: fd.USD2INRChange,
-    USD2INRChangePercentage: fd.USD2INRChangePercentage,
+    SensexPoints: SensexData.current_price || 0,
+    SensexChange: SensexData.price_change || 0,
+    SensexChangePercentage: SensexData.price_change_percentage || 0,
+    Nifty50Points: Nifty50Data.current_price || 0,
+    Nifty50Change: Nifty50Data.price_change || 0,
+    Nifty50ChangePercentage: Nifty50Data.price_change_percentage || 0,
+    BSE500Points: BSE500Data.current_price || 0,
+    BSE500PointsChange: BSE500Data.price_change || 0,
+    BSE500PointsChangePercentage: BSE500Data.price_change_percentage || 0,
   }
 
-  const [selectedLink, setSelectedLink] = useState('page1');
+
   return (
     <header className="absolute w-full z-30 overflow-x-hidden ">
       <div className='fixed bg-black-800'>
@@ -126,9 +134,9 @@ export default function Header() {
           <div className='flex flex-row justify-evenly items-center lg:gap-8 gap-2 mx-2'>
             <MarqueeComponent componentName="Gold" rate={data.GoldRate} changePercentage={data.GoldRateChangePercentage} type='metal' marketChange={data.GoldRateChange} />
             <MarqueeComponent componentName="Silver" rate={data.SilverRate} changePercentage={data.SilverRateChangePercentage} type='metal' marketChange={data.SilverRateChange} />
-            <MarqueeComponent componentName="Sensex" rate={data.SensexPoints} changePercentage={data.SensexChangePercentage} type='index' marketChange={data.SensexChange} />
-            <MarqueeComponent componentName="nifty50" rate={data.Nifty50Points} changePercentage={data.Nifty50ChangePercentage} type='index' marketChange={data.Nifty50Change} />
-            <MarqueeComponent componentName="USDINR FUT" rate={data.USD2INR} changePercentage={data.USD2INRChangePercentage} type='index' marketChange={data.USD2INRChange} />
+            <MarqueeComponent componentName="Sensex" rate={data.SensexPoints} changePercentage={data.SensexChangePercentage} type='metal' marketChange={data.SensexChange} />
+            <MarqueeComponent componentName="nifty 50" rate={data.Nifty50Points} changePercentage={data.Nifty50ChangePercentage} type='metal' marketChange={data.Nifty50Change} />
+            <MarqueeComponent componentName="BSE 500" rate={data.BSE500Points} changePercentage={data.BSE500PointsChangePercentage} type='metal' marketChange={data.BSE500PointsChange} />
           </div>
           </Marquee>
         </div>

@@ -3,6 +3,7 @@ import './css/style.css'
 import { Inter, Rubik } from 'next/font/google'
 
 import Header from '@/components/ui/header'
+import { DataProvider } from '@/utils/ApiContext'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -29,10 +30,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${rubik.variable} font-inter antialiased bg-black-800 text-gray-200 tracking-tight`}>
-        <div className="flex flex-col min-h-screen overflow-hidden gold-background">
-          <Header />
-          {children}
-        </div>
+          <div className="flex flex-col min-h-screen overflow-hidden gold-background">
+            <DataProvider>
+              <Header />
+              {children}
+            </DataProvider>
+          </div>
       </body>
     </html>
   )

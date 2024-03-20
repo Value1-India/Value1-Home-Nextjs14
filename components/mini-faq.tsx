@@ -5,9 +5,9 @@ import Close from '@/public/images/svgs/minus.svg'
 import { useState } from "react";
 export default function FAQmini() {
   const faqData = [
-    { question: 'Question 1', answer: 'Answer 1' },
-    { question: 'Question 2', answer: 'Answer 2' },
-    { question: 'Question 3', answer: 'Answer 3' },
+    { question: 'What is the DigiGold product sold by Value1?', answer: 'DigiGold facilitates the purchase of physical bullion (i.e. bars of Gold/Silver) for as low as Re. 1 with the ease of online access. The customer can request for the delivery of Gold/Silver purchased from Value1 anytime they want in the form of coins/ bars and jewellery and it will be delivered at your doorstep. Customers can also sell the bullion (bought from us) in a secured and convenient manner back to Value1.' },
+    { question: 'How to get started?', answer: 'On Value1, any resident Indian with a valid PAN/Form 60 and a bank account can start purchasing DigiGold. You must simply register by entering your mobile number and verifying it with the OTP provided to you.' },
+    { question: 'How does Value1 ensure a Fair and competitive price?', answer: 'The Buy and Sell prices are calculated using wholesale spot market pricing.' },
     // Add more questions and answers as needed
   ];
   const [selectedQuestion, setSelectedQuestion] = useState<number | null>(null);
