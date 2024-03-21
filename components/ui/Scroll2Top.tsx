@@ -42,7 +42,7 @@ const ScrollToTop: React.FC = () => {
   return (
     <button
       onClick={handleScrollToTop}
-      className={`fixed z-40 right-2 bottom-4 md:bottom-20 md:right-10 xl:bottom-10 md:w-14 w-10 p-2 md:p-3  btn rounded-xl bg-gold-500 hover:bg-gold-600 ${isScrolled ? 'motion-safe:animate-bounce' : ''}`}
+      className={`fixed z-40 right-2 bottom-4 md:bottom-20 md:right-10 xl:bottom-10 md:w-12 w-10 p-2 md:p-2.5  btn rounded-xl bg-gold-500 hover:bg-gold-600 ${isScrolled ? 'motion-safe:animate-bounce' : ''}`}
       style={{ display: isVisible ? 'block' : 'none', transition:'all 2s ease-in-out' } }
     >
       <Image src={Top} width={100} height={100} alt='scroll-up' />
