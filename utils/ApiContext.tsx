@@ -53,23 +53,18 @@ export const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
     try {
       const response = await fetch(url);
       const data = await response.json();
-      setData(data.data);
+      console.log(data)
+      setData(data);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
   };
 
-  // Fetch data at regular intervals
+  // Fetch data when component mounts
   useEffect(() => {
-    const fetchDataInterval = setInterval(() => {
-      fetchData('https://vmarket-api.vercel.app/scrape/SENSEX', setSensexData);
-      fetchData('https://vmarket-api.vercel.app/scrape/NIFTY-50', setNifty50Data);
-      fetchData('https://vmarket-api.vercel.app/scrape/BSE-500', setBSE500Data);
-      console.log('Refreshed')
-    }, 3000); // Refresh data every 3 seconds
-    
-    // Clean up the interval to avoid memory leaks
-    return () => clearInterval(fetchDataInterval);
+    fetchData('https://vmarket-api.vercel.app/scrape/SENSEX', setSensexData);
+    fetchData('https://vmarket-api.vercel.app/scrape/NIFTY-50', setNifty50Data);
+    fetchData('https://vmarket-api.vercel.app/scrape/BSE-500', setBSE500Data);
   }, []);
 
   // Provide data to children components
