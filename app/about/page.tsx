@@ -15,6 +15,7 @@ export const metadata = {
  import AP from '@/public/images/ap.svg'
  import Mondragon from '@/public/images/Logo_-_Mondragon_Corp.jpg'
  import Publix from '@/public/images/publix-super-markets4806.jpg'
+ import JLP from '@/public/images/jlp-logo.svg'
 
  import bgPattern from '@/public/images/pattern3.png'
  import bgPattern2 from '@/public/images/pattern-4@2x.png'
@@ -128,6 +129,7 @@ export const metadata = {
                     <div className='flex flex-wrap flex-row items-center justify-center py-8'>
                         <div className='flex flex-wrap flex-row items-center justify-evenly gap-4'>
                             {[
+                                { src: JLP, alt: 'John Lewis Partnership', text: 'John Lewis Partnership - Co-Owned By 80,000 Employees' },
                                 { src: Amul, alt: 'Amul - Coop & Co-Owned by 3.6million Farmers', text: 'Amul - Coop & Co-Owned by 3.6million Farmers' },
                                 { src: FCBarcelona, alt: 'The FC Barcelona - Owned by Club Members', text: 'The FC Barcelona - Owned by Club Members' },
                                 { src: RealMadridFC, alt: 'Real Madrid CF - Owned by Fans', text: 'Real Madrid CF - Owned by Fans' },

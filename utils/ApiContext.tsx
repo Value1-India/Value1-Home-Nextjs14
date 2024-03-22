@@ -41,6 +41,7 @@ export const useData = () => {
   return context;
 };
 
+
 // Context provider component
 export const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
   // State to hold data from each URL

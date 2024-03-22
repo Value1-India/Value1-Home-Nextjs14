@@ -101,11 +101,11 @@ export default function TestimonialSlider() {
                                             </svg>
                                         ))}
                                     </div>
-                                    <p className="text-sm font-normal text-gray-600 ">{testimonial.title}</p>
-                                    <p className="mt-0.5 text-lg font-medium text-gold-600 ">{testimonial.name}</p>
+                                    <p className="text-sm font-normal text-black-800 ">{testimonial.title}</p>
+                                    <p className="mt-0.5 text-xl font-medium text-black-800 ">{testimonial.name}</p>
                                 </div>
                             </div>
-                            <p className="mt-4 text-black-700 text-center ">{testimonial.content}</p>
+                            <p className="mt-6 text-black-700 text-center ">{testimonial.content}</p>
                         </blockquote>
                     </div>
                 </SwiperSlide>
