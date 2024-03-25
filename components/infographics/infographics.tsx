@@ -12,6 +12,8 @@ import Redeem from '@/public/images/svgs/redeem.svg'
 import Jewellery from '@/public/images/svgs/jewellery.svg'
 import GoldCoins from '@/public/images/svgs/gold-coins.svg'
 import Withdraw from '@/public/images/svgs/withdraw.svg'
+import Certificate from '@/public/images/svgs/certificate.svg'
+import ValueCoin from '@/public/images/svgs/value-coin.svg'
 
 const Infographics = () => {
 
@@ -153,7 +155,7 @@ const Infographics = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='p-1 step7 relative mb-24 md:mb-0'>
+                    <div className='p-1 step7 relative mb-2 md:mb-0'>
                         <div className='hidden xl:block relative z-10 bg-transparent w-20 top-24 md:top-[26px] xl:-top-24 left-[62px] border-2 border-gold-500 border-dashed rounded-full'></div>
                         <div className='absolute z-10 bg-transparent h-[430px] md:h-[300px] -top-80 md:-top-[430px] left-[38px] border-2 border-gold-500 border-dashed rounded-full'></div>
                         <div className='absolute z-10 top-28 md:-top-28 left-5 w-10'><Image src={Pointer} height={100} width={100} alt='Pointer' /></div>
@@ -163,6 +165,30 @@ const Infographics = () => {
                             </div>
                             <div className='font-bold text-sm text-center'>Withdraw</div>
                             <div className='font-light text-white text-xs w-28 text-center'>Withdraw the amount in your Bank Account</div>
+                        </div>
+                    </div>
+                    <div className='p-1 step8 relative mt-16'>
+                        <div className='hidden xl:block relative z-10 bg-transparent w-20 top-24 md:top-[26px] xl:-top-24 left-[62px] border-2 border-gold-500 border-dashed rounded-full'></div>
+                        <div className='absolute z-10 bg-transparent h-[180px] md:h-[150px] -top-12 md:-top-[270px] left-[38px] border-2 border-gold-500 border-dashed rounded-full'></div>
+                        <div className='absolute z-10 top-28 md:-top-28 left-5 w-10'><Image src={Pointer} height={100} width={100} alt='Pointer' /></div>
+                        <div className='relative step-container left-20 xl:left-36 top-14 md:-top-40 z-0 flex flex-col items-center text-gold-500 px-1 py-1 rounded-xl w-36 max-w-xs'>
+                            <div>
+                                <Image src={ValueCoin} alt='Add User' className='w-16 px-1' />
+                            </div>
+                            <div className='font-bold text-sm text-center'>Redeem Value Coins</div>
+                            <div className='font-light text-white text-xs w-28 text-center'>Exercise your stock options with Value Coins</div>
+                        </div>
+                    </div>
+                    <div className='p-1 step9 relative mt-16 mb-28 md:mb-0'>
+                        <div className='hidden xl:block relative z-10 bg-transparent w-20 top-24 md:top-[26px] xl:-top-24 left-[62px] border-2 border-gold-500 border-dashed rounded-full'></div>
+                        <div className='absolute z-10 bg-transparent h-[190px] md:h-[150px] -top-16 md:-top-[270px] left-[38px] border-2 border-gold-500 border-dashed rounded-full'></div>
+                        <div className='absolute z-10 top-28 md:-top-28 left-5 w-10'><Image src={Pointer} height={100} width={100} alt='Pointer' /></div>
+                        <div className='relative step-container left-20 xl:left-36 top-14 md:-top-44 z-0 flex flex-col items-center text-gold-500 px-1 py-1 rounded-xl w-36 max-w-xs'>
+                            <div>
+                                <Image src={Certificate} alt='Add User' className='w-16 px-1' />
+                            </div>
+                            <div className='font-bold text-sm text-center'>Share Holding</div>
+                            <div className='font-light text-white text-xs w-28 text-center'>Receive your Share Certificate</div>
                         </div>
                     </div>
                 </div>

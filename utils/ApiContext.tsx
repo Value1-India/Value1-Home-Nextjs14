@@ -54,6 +54,11 @@ export const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
     try {
       const response = await fetch(url);
       const data = await response.json();
+      Object.keys(data).forEach(key => {
+        if (!isNaN(data[key])) {
+            data[key] = parseFloat(data[key]);
+        }
+    });
       console.log(data)
       setData(data);
     } catch (error) {
