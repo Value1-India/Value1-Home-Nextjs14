@@ -28,13 +28,13 @@ export default function MarqueeScroller() {
       }
     return(
         <>
-          <Marquee speed={80} pauseOnHover pauseOnClick direction='right' loop={0} className='md:w-4/6 w-5/6 bg-gold-600' gradient gradientColor='#e2aa03' gradientWidth={30}>
+          <Marquee speed={80} pauseOnHover pauseOnClick direction='right' loop={0} className='md:w-4/6 w-5/6 bg-gold-100' gradient gradientColor='#fef2cd' gradientWidth={30}>
           <div className='flex flex-row justify-evenly items-center lg:gap-8 gap-2 mx-2'>
-            <MarqueeComponent componentName="Gold" rate={data.GoldRate} changePercentage={data.GoldRateChangePercentage} type='metal' marketChange={data.GoldRateChange} />
-            <MarqueeComponent componentName="Silver" rate={data.SilverRate} changePercentage={data.SilverRateChangePercentage} type='metal' marketChange={data.SilverRateChange} />
-            <MarqueeComponent componentName="Sensex" rate={data.SensexPoints} changePercentage={data.SensexChangePercentage} type='metal' marketChange={data.SensexChange} />
-            <MarqueeComponent componentName="nifty 50" rate={data.Nifty50Points} changePercentage={data.Nifty50ChangePercentage} type='metal' marketChange={data.Nifty50Change} />
-            <MarqueeComponent componentName="BSE 500" rate={data.BSE500Points} changePercentage={data.BSE500PointsChangePercentage} type='metal' marketChange={data.BSE500PointsChange} />
+            <MarqueeComponent componentName="Gold" rate={data.GoldRate} changePercentage={data.GoldRateChangePercentage}  marketChange={data.GoldRateChange} />
+            <MarqueeComponent componentName="Silver" rate={data.SilverRate} changePercentage={data.SilverRateChangePercentage} marketChange={data.SilverRateChange} />
+            <MarqueeComponent componentName="Sensex" rate={data.SensexPoints} changePercentage={data.SensexChangePercentage} marketChange={data.SensexChange} />
+            <MarqueeComponent componentName="nifty 50" rate={data.Nifty50Points} changePercentage={data.Nifty50ChangePercentage} marketChange={data.Nifty50Change} />
+            <MarqueeComponent componentName="BSE 500" rate={data.BSE500Points} changePercentage={data.BSE500PointsChangePercentage} marketChange={data.BSE500PointsChange} />
           </div>
           </Marquee>
         </>

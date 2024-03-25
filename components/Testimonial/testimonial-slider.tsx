@@ -56,7 +56,7 @@ export default function TestimonialSlider() {
             spaceBetween={30}
             centeredSlides={true}
             autoplay={{
-                delay: 1000,
+                delay: 3000,
                 disableOnInteraction: true,
             }}
             pagination={{
@@ -83,10 +83,10 @@ export default function TestimonialSlider() {
             {testimonials.map((testimonial, index) => (
                 <SwiperSlide key={index} className='px-4'>
                     <div className="flex items-center justify-center">
-                        <blockquote className="rounded-3xl bg-white py-4 px-3 shadow-sm md:p-8 w-[450px]">
+                        <blockquote className="group rounded-3xl border-2 border-gold-500 bg-gold-100 py-4 px-3 shadow-sm md:p-8 w-[450px] h-[350px] flex flex-col justify-center">
                             <div className="flex flex-row items-center justify-center">
                                 <div className='flex flex-col-reverse items-center justify-between'>
-                                    <div className="flex justify-center gap-1 text-gold-500 mt-1">
+                                    <div className="flex justify-center gap-1 group-hover:animate-ping text-gold-500 mt-2">
                                         {[...Array(5)].map((_, i) => (
                                             <svg
                                                 key={i}

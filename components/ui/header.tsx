@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <header className="absolute w-full z-30 overflow-x-hidden ">
       <div className='fixed bg-black-800'>
-        <div className="w-full mx-auto border-b-2 border-white px-6">
+        <div className="w-full mx-auto border-b-2 border-gold-500 px-6">
           <div className="flex items-center justify-between h-20 xl:mx-20 2xl:mx-40">
             {/* Site branding */}
             <div className="shrink-0 px-4">
@@ -100,7 +100,7 @@ export default function Header() {
 
           </div>
         </div>
-        <div className='flex w-screen h-8 bg-gold-600 justify-center'>
+        <div className='flex w-screen h-8 bg-gold-100 border-gold-500 border-b-2 justify-center'>
           <MarqueeScroller />
         </div>
       </div>

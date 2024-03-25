@@ -32,10 +32,10 @@ export default function RateCard({ goldRate, silverRate }: RateCardProps): JSX.E
 
     if (chooseOption === 'buy') {
       const rateWithGST = parseFloat(rate) * 1.03; // Adding 3% GST for Buy option
-      return rateWithGST.toFixed(2);
+      return rateWithGST.toLocaleString("en-IN",{style:'currency', currency:'INR'});
     }
 
-    return rate;
+    return parseFloat(rate).toLocaleString("en-IN",{style:'currency', currency:'INR'});
   };
 
   const handleExchangeClick = (): void => {
@@ -182,7 +182,7 @@ export default function RateCard({ goldRate, silverRate }: RateCardProps): JSX.E
               <div className='mb-1 text-md font-semibold md:mb-2 md:text-xl md:font-bold'>Silver</div>
             </div>
           </div>
-          <div className='font-medium text-white py-3 lg:text-4xl text-3xl md:py-3'>&#8377;{calculateFinalRate()}/g</div>
+          <div className='font-medium text-white py-3 lg:text-4xl text-3xl md:py-3'>{calculateFinalRate()}/g</div>
           <div className='flex items-center justify-center gap-3 pb-2 text-black-700 font-medium text-sm md:text-md lg:text-lg'> {/* live rate animation */}
             <div className='bg-red-600 rounded-full animate-ping w-2 h-2'></div>
             <div>Live Rates</div>
