@@ -3,7 +3,7 @@ import './css/style.css'
 import { Inter, Rubik } from 'next/font/google'
 
 import Header from '@/components/ui/header'
-import { DataProvider } from '@/utils/ApiContext'
+import { DataProvider } from '@/utils/ApiContextV2'
 
 const inter = Inter({
   subsets: ['latin'],

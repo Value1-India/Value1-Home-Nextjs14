@@ -144,18 +144,18 @@ export default function FAQ() {
 
           <div className="max-w-screen-md mx-auto text-center mt-10">
             <h3 className="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight text-white">
-              Frequently Asked <span className="text-gold-600">Questions</span>
+              Frequently Asked <span className="text-gold-500">Questions</span>
             </h3>
             <p>Got any questions? We’ve got answers</p>
 
           </div>
 
           <div className="flex flex-row items-center justify-center mt-16">
-            <div className="max-w-sm rounded-xl overflow-x-scroll px-3 lg:px-10 .faq-scrollbar border-2">
-              <ul className="flex flex-row items-center justify-evenly gap-4 px-4 py-3 w-max cursor-pointer ">
-                <li className={`${selectedSection === 'first' ? 'text-gold-500 border-b-2' : 'text-white'} cursor-pointer p-1 lg:text-xl text-gold-500 border-gold-500 rounded-md font-bold `} onClick={() => setSelectedSection('first')}>FAQ 1</li>
+            <div className="max-w-sm rounded-xl overflow-x-scroll px-3 lg:px-6 .faq-scrollbar border-2 border-white bg-gold-100">
+              <ul className="flex flex-row items-center justify-evenly gap-4 px-3 py-1 w-max cursor-pointer ">
+                <li className={`${selectedSection === 'first' ? 'text-gold-500 border-b-2' : 'text-black-800'} cursor-pointer p-1 lg:text-xl hover:text-gold-400 border-gold-500 rounded-md font-bold `} onClick={() => setSelectedSection('first')}>FAQ 1</li>
                 {/* ADD other Topics here like the above <li> */}
-                {/* <li className={`${selectedSection === 'second' ? 'text-gold-500 border-b-2' : 'text-white'} cursor-pointer p-1 lg:text-xl text-gold-500 border-gold-500 rounded-md font-bold `} onClick={() => setSelectedSection('second')}>FAQ 2</li> */}
+                {/* <li className={`${selectedSection === 'second' ? 'text-gold-500 border-b-2' : 'text-black-800'} cursor-pointer p-1 lg:text-xl hover:text-gold-400 border-gold-500 rounded-md font-bold `} onClick={() => setSelectedSection('second')}>FAQ 2</li> */}
               </ul>
             </div>
           </div>
