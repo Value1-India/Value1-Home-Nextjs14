@@ -87,7 +87,7 @@ export default function Header() {
                 </li>
                 <li>
                   <Link
-                    href="https://app.value1.in"
+                    href="https://app.value1.in/auth"
                     className="font-semibold w-max inline-flex items-center justify-center border border-transparent ml-2 px-3 py-2 my-2 rounded-full text-white bg-gold-500 hover:bg-gold-400 active:scale-95 transition duration-150 ease-in-out"
                   >
                     Sign Up / Sign In

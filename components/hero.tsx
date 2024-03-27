@@ -42,10 +42,10 @@ export default function Hero() {
               <p className="text-xl text-gold-600 mb-8" data-aos="fade-up" data-aos-delay="220">Buy 24k 999 Pure Digital Gold online at the best prices from the comforts of your home</p>
               <div className="max-w-xs mx-auto sm:max-w-none sm:flex items-center sm:justify-center">
                 <div data-aos="fade-up" data-aos-delay="400">
-                  <a className="btn text-white rounded-xl bg-gold-600 hover:bg-gold-700 w-full mb-4 sm:w-40 lg:w-max text-center sm:mb-0" href="#">Start saving Gold now!</a>
+                  <a className="btn text-gold-600 rounded-xl bg-white hover:bg-gold-500 hover:text-white w-full mb-4 sm:w-40 lg:w-max text-center sm:mb-0 transition duration-300 ease-in-out" href="https://app.value1.in/auth">Start saving Gold now!</a>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="600">
-                  <a className="btn text-white rounded-xl bg-transparent border-2 border-gold-600 hover:bg-gold-700 w-full sm:w-auto sm:ml-4" href="#features">Learn more</a>
+                  <a className="btn text-white rounded-xl bg-transparent border-2 border-gold-600 hover:bg-white hover:text-gold-500 w-full sm:w-auto sm:ml-4 transition duration-300 ease-in-out" href="#features">Learn more</a>
                 </div>
               </div>
             </div>

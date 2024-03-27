@@ -37,13 +37,16 @@ export default function Footer() {
                 <h6 className="text-gold-500 font-medium mb-1">Explore</h6>
                 <ul>
                   <li className="mb-1">
-                    <Link href="/about" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">About</Link>
+                    <Link href="/about" className="text-white hover:text-gold-500 transition duration-150 ease-in-out">About</Link>
                   </li>
                   <li className="mb-1">
-                    <Link href="/" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Community</Link>
+                    <Link href="#" className="text-white hover:text-gold-500 transition duration-150 ease-in-out">Community</Link>
                   </li>
                   <li className="mb-1">
-                    <Link href="/" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Blog</Link>
+                    <Link href="#" className="text-white hover:text-gold-500 transition duration-150 ease-in-out">Blog</Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link href="/frequently-asked-questions" className="text-white hover:text-gold-500 transition duration-150 ease-in-out">FAQs</Link>
                   </li>
                 </ul>
               </div>
@@ -53,16 +56,16 @@ export default function Footer() {
                 <h6 className="text-gold-500 font-medium mb-1">Legal</h6>
                 <ul>
                   <li className="mb-1">
-                    <Link href="/legal" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Terms & Condition</Link>
+                    <Link href="/legal" className="text-white hover:text-gold-500 transition duration-150 ease-in-out">Terms & Condition</Link>
                   </li>
                   <li className="mb-1">
-                    <Link href="/legal" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Privacy Policy</Link>
+                    <Link href="/legal" className="text-white hover:text-gold-500 transition duration-150 ease-in-out">Privacy Policy</Link>
                   </li>
                   <li className="mb-1">
-                    <Link href="/legal" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Cancellation & Returns</Link>
+                    <Link href="/legal" className="text-white hover:text-gold-500 transition duration-150 ease-in-out">Cancellation & Returns</Link>
                   </li>
                   <li className="mb-1">
-                    <Link href="/legal" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Shopping Policy</Link>
+                    <Link href="/legal" className="text-white hover:text-gold-500 transition duration-150 ease-in-out">Shopping Policy</Link>
                   </li>
                 </ul>
               </div>
@@ -72,16 +75,16 @@ export default function Footer() {
                 <h6 className="font-medium mb-1 text-gold-500">Social Media</h6>
                 <ul>
                   <li className="mb-1">
-                    <Link href="https://www.facebook.com/Value1.in" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Facebook</Link>
+                    <Link href="https://www.facebook.com/Value1.in" className="text-white hover:text-gold-500 transition duration-150 ease-in-out">Facebook</Link>
                   </li>
                   <li className="mb-1">
-                    <Link href="https://www.instagram.com/value1.in" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Instagram</Link>
+                    <Link href="https://www.instagram.com/value1.in" className="text-white hover:text-gold-500 transition duration-150 ease-in-out">Instagram</Link>
                   </li>
                   <li className="mb-1">
-                    <Link href="https://twitter.com/Value1_co" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">X (Twitter)</Link>
+                    <Link href="https://twitter.com/Value1_co" className="text-white hover:text-gold-500 transition duration-150 ease-in-out">X (Twitter)</Link>
                   </li>
                   <li className="mb-1">
-                    <Link href="https://www.linkedin.com/company/value1-co-owning/" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">LinkedIn</Link>
+                    <Link href="https://www.linkedin.com/company/value1-co-owning/" className="text-white hover:text-gold-500 transition duration-150 ease-in-out">LinkedIn</Link>
                   </li>
                 </ul>
               </div>
@@ -128,7 +131,7 @@ export default function Footer() {
             </ul>
 
             {/* Copyrights note */}
-            <div className="text-gray-400 text-sm text-center pt-3">&copy; <span className='text-gold-500'>Value1.in</span> All rights reserved.</div>
+            <div className="text-white text-sm text-center pt-3">&copy; <span className='text-gold-500'>Value1.in</span> All rights reserved.</div>
 
           </div>
 
