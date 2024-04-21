@@ -23,7 +23,7 @@ export default function CoOwnPage() {
       <section className='max-w-full mx-auto md:mt-20'>
         <div className='flex items-center justify-center'>
           <div className='h-screen w-full flex items-center justify-center gap-10 relative px-3'>
-            <video src="/coown-bg.mp4" autoPlay loop muted id='video-overlay' className='h-full w-auto object-cover lg:w-full'></video>
+            <video src="/coown-bg.mp4" autoPlay playsInline loop muted id='video-overlay' className='h-full w-auto object-cover lg:w-full'></video>
             <div className='flex flex-col items-center justify-center text-center gap-10'>
               <div className='font-semibold text-3xl md:font-bold md:text-5xl'>Introducing</div>
               <Image src={Value1} alt="value1 logo" height={150} width={150} className='w-44 md:w-64' />
