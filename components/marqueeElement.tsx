@@ -5,9 +5,10 @@ interface MarqueeProps {
   rate: number; //points
   marketChange: number,
   changePercentage: number;
+  type: string
 }
 
-const MarqueeComponent: React.FC<MarqueeProps> = ({ componentName, rate, changePercentage, marketChange}) => {
+const MarqueeComponent: React.FC<MarqueeProps> = ({ componentName, rate, changePercentage, marketChange, type }) => {
   const isPositive = changePercentage >= 0;
 
   const formatCurrency = (value: number): string => {
@@ -24,19 +25,29 @@ const MarqueeComponent: React.FC<MarqueeProps> = ({ componentName, rate, changeP
     <div style={{ whiteSpace: 'nowrap', overflow: 'hidden' }} className='font-normal uppercase font-poppins text-black-800 lg:text-base lg:mx-14 text-sm mx-3'>
       <span className="marquee-content italic font-semibold">{componentName}</span>
       <span className='pl-2 pr-1'>{formatCurrency(rate)}</span>
-      {isPositive ? (
+      {type === 'metal' ? (
         <>
-          <span style={{ color: '#33cc00' }} className='pr-1'>▲</span>
-          <span style={{ color: '#33cc00' }} className='pr-2'>{marketChange < 0 ? '-' : '+'}{Math.abs(marketChange)}</span>
-          <span style={{ color: '#33cc00' }}>({changePercentage < 0 ? '-' : '+'}{Math.abs(changePercentage)}%)</span>
+        <span style={{ color: '#33cc00' }} className='pr-1'>24K</span>
+        <span style={{ color: '#33cc00' }} className='pr-2'>999</span>
         </>
       ) : (
         <>
-          <span style={{ color: '#e62e00' }} className='pr-1'>▼</span>
-          <span style={{ color: '#e62e00' }} className='pr-2'>{marketChange < 0 ? '-' : '+'}{Math.abs(marketChange)}</span>
-          <span style={{ color: '#e62e00' }}>({changePercentage < 0 ? '-' : '+'}{Math.abs(changePercentage)}%)</span>
+          {isPositive ? (
+            <>
+              <span style={{ color: '#33cc00' }} className='pr-1'>▲</span>
+              <span style={{ color: '#33cc00' }} className='pr-2'>{marketChange < 0 ? '-' : '+'}{Math.abs(marketChange)}</span>
+              <span style={{ color: '#33cc00' }}>({changePercentage < 0 ? '-' : '+'}{Math.abs(changePercentage)}%)</span>
+            </>
+          ) : (
+            <>
+              <span style={{ color: '#e62e00' }} className='pr-1'>▼</span>
+              <span style={{ color: '#e62e00' }} className='pr-2'>{marketChange < 0 ? '-' : '+'}{Math.abs(marketChange)}</span>
+              <span style={{ color: '#e62e00' }}>({changePercentage < 0 ? '-' : '+'}{Math.abs(changePercentage)}%)</span>
+            </>
+          )}
         </>
       )}
+
     </div>
   );
 };

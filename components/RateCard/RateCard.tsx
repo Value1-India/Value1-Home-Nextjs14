@@ -1,15 +1,24 @@
 'use client'
 
-import Link from 'next/link';
-import MobileMenu from '@/components/ui/mobile-menu';
 import xicon from '@/public/images/exchange-icon.png';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import CurrencyInput from 'react-currency-input-field';
 
+// interface RateCardProps {
+//   goldRate: string;
+//   silverRate: string;
+// }
+
 interface RateCardProps {
-  goldRate: string;
-  silverRate: string;
+  goldRate: {
+    Buy: string,
+    Sell: string,
+  };
+  silverRate: {
+    Buy: string,
+    Sell: string,
+  };
 }
 
 export default function RateCard({ goldRate, silverRate }: RateCardProps): JSX.Element {
@@ -31,20 +40,21 @@ export default function RateCard({ goldRate, silverRate }: RateCardProps): JSX.E
     let rate = chooseMetal === 'gold' ? goldRate : silverRate;
 
     if (chooseOption === 'buy') {
-      const rateWithGST = parseFloat(rate) * 1.03; // Adding 3% GST for Buy option
-      return rateWithGST.toLocaleString("en-IN",{style:'currency', currency:'INR'});
+      //const rateWithGST = parseFloat(rate) * 1.03; // Adding 3% GST for Buy option
+      const buyRate = parseFloat(rate.Buy)
+      return buyRate.toLocaleString("en-IN", { style: 'currency', currency: 'INR' });
     }
 
-    return parseFloat(rate).toLocaleString("en-IN",{style:'currency', currency:'INR'});
+    return parseFloat(rate.Sell).toLocaleString("en-IN", { style: 'currency', currency: 'INR' });
   };
 
   const handleExchangeClick = (): void => {
     if (activeInput === 'rupees') {
       let convertedGrams;
       if (chooseMetal === 'gold') {
-        convertedGrams = parseFloat(rupeesValue) / parseFloat(goldRate);
+        convertedGrams = parseFloat(rupeesValue) / parseFloat(goldRate.Buy);
       } else {
-        convertedGrams = parseFloat(rupeesValue) / parseFloat(silverRate);
+        convertedGrams = parseFloat(rupeesValue) / parseFloat(silverRate.Buy);
       }
       if (!isNaN(convertedGrams)) {
         setGramsValue(convertedGrams.toFixed(2));
@@ -53,12 +63,12 @@ export default function RateCard({ goldRate, silverRate }: RateCardProps): JSX.E
     } else if (activeInput === 'grams') {
       let convertedRupees;
       if (chooseMetal === 'gold') {
-        convertedRupees = parseFloat(gramsValue) * parseFloat(goldRate);
+        convertedRupees = parseFloat(gramsValue) * parseFloat(goldRate.Buy);
       } else {
-        convertedRupees = parseFloat(gramsValue) * parseFloat(silverRate);
+        convertedRupees = parseFloat(gramsValue) * parseFloat(silverRate.Buy);
       }
       if (!isNaN(convertedRupees)) {
-        setRupeesValue(convertedRupees.toFixed(2));
+        setRupeesValue(convertedRupees.toFixed(4));
         setActiveInput('rupees');
       }
     }
@@ -100,49 +110,49 @@ export default function RateCard({ goldRate, silverRate }: RateCardProps): JSX.E
       if (activeInput === 'rupees') {
         let convertedValue;
         if (chooseOption === 'buy') {
-          convertedValue = parseFloat(rupeesValue) / parseFloat(gstConversion());
+          convertedValue = parseFloat(rupeesValue) / parseFloat(goldRate.Buy);
         } else {
-          convertedValue = parseFloat(rupeesValue) / parseFloat(goldRate);
+          convertedValue = parseFloat(rupeesValue) / parseFloat(goldRate.Sell);
         }
         if (!isNaN(convertedValue)) {
-          setGramsValue(convertedValue.toFixed(2));
+          setGramsValue(convertedValue.toFixed(4));
         }
       } else {
         let convertedValue;
         if (chooseOption === 'buy') {
-          convertedValue = parseFloat(gramsValue) * parseFloat(gstConversion());
+          convertedValue = parseFloat(gramsValue) * parseFloat(goldRate.Buy);
         } else {
-          convertedValue = parseFloat(gramsValue) * parseFloat(goldRate);
+          convertedValue = parseFloat(gramsValue) * parseFloat(goldRate.Sell);
         }
         if (!isNaN(convertedValue)) {
-          setRupeesValue(convertedValue.toFixed(2));
+          setRupeesValue(convertedValue.toFixed(4));
         }
       }
     } else if (chooseMetal === 'silver') {
       if (activeInput === 'rupees') {
         let convertedValue;
         if (chooseOption === 'buy') {
-          convertedValue = parseFloat(rupeesValue) / parseFloat(gstConversion());
+          convertedValue = parseFloat(rupeesValue) / parseFloat(silverRate.Buy);
         } else {
-          convertedValue = parseFloat(rupeesValue) / parseFloat(silverRate);
+          convertedValue = parseFloat(rupeesValue) / parseFloat(silverRate.Sell);
         }
         if (!isNaN(convertedValue)) {
-          setGramsValue(convertedValue.toFixed(2));
+          setGramsValue(convertedValue.toFixed(4));
         }
       } else {
         let convertedValue;
         if (chooseOption === 'buy') {
-          convertedValue = parseFloat(gramsValue) * parseFloat(gstConversion());
+          convertedValue = parseFloat(gramsValue) * parseFloat(silverRate.Buy);
         } else {
-          convertedValue = parseFloat(gramsValue) * parseFloat(silverRate);
+          convertedValue = parseFloat(gramsValue) * parseFloat(silverRate.Sell);
         }
         if (!isNaN(convertedValue)) {
-          setRupeesValue(convertedValue.toFixed(2));
+          setRupeesValue(convertedValue.toFixed(4));
         }
       }
     }
   }, [chooseMetal, gramsValue, rupeesValue, goldRate, silverRate, activeInput, chooseOption]);
-  
+
 
 
 
@@ -162,12 +172,12 @@ export default function RateCard({ goldRate, silverRate }: RateCardProps): JSX.E
     }
   };
 
-  const gstConversion = (): string => {
-    let rate = chooseMetal === 'gold' ? goldRate : silverRate;
-  
-    const rateWithGST = parseFloat(rate) * 1.03; // Adding 3% GST for Buy option
-    return rateWithGST.toFixed(2);
-  };
+  // const gstConversion = (): string => {
+  //   let rate = chooseMetal === 'gold' ? goldRate : silverRate;
+
+  //   const rateWithGST = parseFloat(rate) * 1.03; // Adding 3% GST for Buy option
+  //   return rateWithGST.toFixed(2);
+  // };
 
 
   return (
@@ -181,8 +191,9 @@ export default function RateCard({ goldRate, silverRate }: RateCardProps): JSX.E
             <div className={`px-2 md:px-4 cursor-pointer ${chooseMetal === 'silver' ? 'text-white border-b-4 rounded border-white' : ''}`} onClick={() => handleMetalClick('silver')}>
               <div className='mb-1 text-md font-semibold md:mb-2 md:text-xl md:font-bold'>Silver</div>
             </div>
+
           </div>
-          <div className='font-medium text-white py-3 lg:text-4xl text-3xl md:py-3'>{calculateFinalRate()}/g</div>
+          <div id='metalrate' className='font-medium text-white py-3 lg:text-4xl text-3xl md:py-3'>{calculateFinalRate()}/g</div>
           <div className='flex items-center justify-center gap-3 pb-2 text-black-700 font-medium text-sm md:text-md lg:text-lg'> {/* live rate animation */}
             <div className='bg-red-600 rounded-full animate-ping w-2 h-2'></div>
             <div>Live Rates</div>
@@ -193,7 +204,7 @@ export default function RateCard({ goldRate, silverRate }: RateCardProps): JSX.E
         {/* Buy/Sell section and other components remain unchanged */}
         <div className='flex flex-col items-center justify-center pb-2'>{/* Buy/Sell section */}
           <div className='w-full flex items-center justify-between text-center text-white mb-2 md:mb-4 bg-gold-700'>
-            <div className={`w-full px-4 cursor-pointer ${chooseOption === 'buy' ? 'text-gold-500 bg-black-500': ''}`} onClick={() => handleOptionClick('buy')}>
+            <div className={`w-full px-4 cursor-pointer ${chooseOption === 'buy' ? 'text-gold-500 bg-black-500' : ''}`} onClick={() => handleOptionClick('buy')}>
               <div className='py-2 md:py-3 font-semibold md:text-xl md:font-bold'>Buy</div>
             </div>
             <div className={`w-full px-4 cursor-pointer ${chooseOption === 'sell' ? 'text-gold-500 bg-black-500' : ''}`} onClick={() => handleOptionClick('sell')}>
@@ -245,9 +256,9 @@ export default function RateCard({ goldRate, silverRate }: RateCardProps): JSX.E
               {activeInput === 'rupees' ? '₹5000' : '100g'}
             </div>
           </div>
-          <button className='btn w-20 p-1 md:w-32 md:mb-2 md:px-6 md:py-3 bg-gold-500 text-black-700 font-bold text-lg md:text-xl rounded-xl hover:bg-gold-600'>
-          {chooseOption === 'buy' ? 'Buy' : 'Sell'}
-        </button>
+          <a href='https://app.value1.in' className='btn w-20 p-1 md:w-32 md:mb-2 md:px-6 md:py-3 bg-gold-500 text-black-700 font-bold text-lg md:text-xl rounded-xl hover:bg-gold-600'>
+            {chooseOption === 'buy' ? 'Buy' : 'Sell'}
+          </a>
         </div>
       </div>
     </div>

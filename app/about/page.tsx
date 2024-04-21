@@ -42,7 +42,7 @@ export const metadata = {
                     </div>
                     <div className='flex items-center justify-center py-4'>
                         <div>
-                            <div className='font-bold text-gold-500 text-center md:text-lg xl:text-xl '>About Value1 – Pioneering Co-Ownership in Gold</div>
+                            <div className='font-bold text-gold-500 text-center md:text-lg xl:text-xl '>About Value1 – Pioneering Co-Ownership in Gold Store</div>
                             <div className='mt-2 text-left font-normal px-2'>
                                 Welcome to Value1, where we introduce a revolutionary concept in gold ownership. We are not just a gold store; we are a community-driven platform that allows our customers to become shareholders of Value1. Through our innovative co-owning model, we value your association with us and reward your loyalty with an opportunity to become a co-owner.
                             </div>
@@ -65,12 +65,12 @@ export const metadata = {
                                     <p className='text-justify mt-1'>&emsp; Every purchase you make with us contributes to your ownership journey. Buy more gold to increase your stake in Value1. </p>
                                 </li>
                                 <li className='font-normal text-left mb-2'>
-                                    <span className='font-bold text-gold-800'>Earn Loyalty Points:</span>
-                                    <p className='text-justify mt-1'>&emsp; As a token of appreciation, we issue loyalty points for each purchase. These points signify your commitment to our community.</p>
+                                    <span className='font-bold text-gold-800'>Earn Loyalty Points as Value Coins:</span>
+                                    <p className='text-justify mt-1'>&emsp; As a token of appreciation, we issue value coins for each purchase. These points signify your commitment to our community.</p>
                                 </li>
                                 <li className='font-normal text-left mb-2'>
                                     <span className='font-bold text-gold-800'>Redeem for Co-Ownership:</span>
-                                    <p className='text-justify mt-1'>&emsp; Accumulate loyalty points to redeem stock options, transforming yourself from a valued customer into a co-owner of Value1.</p>
+                                    <p className='text-justify mt-1'>&emsp; Accumulate value coins (loyalty points) to redeem stock options, transforming yourself from a valued customer into a co-owner of Value1.</p>
                                 </li>
                             </ul>
                         </div>
@@ -86,7 +86,7 @@ export const metadata = {
                                 </li>
                                 <li className='font-normal text-left mb-2'>
                                     <span className='font-bold text-gold-800'>Transparent and Rewarding:</span>
-                                    <p className='text-justify mt-1'>&emsp; Transparency is our foundation. As you accumulate loyalty points, you have a clear path to co-ownership, making the process both transparent and rewarding.</p>
+                                    <p className='text-justify mt-1'>&emsp; Transparency is our foundation. As you accumulate Value coins (loyalty points), you have a clear path to co-ownership, making the process both transparent and rewarding.</p>
 
                                 </li>
                                 <li className='font-normal text-left mb-2'>
