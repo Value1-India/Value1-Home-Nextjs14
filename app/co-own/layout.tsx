@@ -7,6 +7,7 @@ import 'aos/dist/aos.css'
 
 import PageIllustration from '@/components/page-illustration'
 import Footer from '@/components/ui/footer'
+import ScrollToTop from '@/components/ui/Scroll2Top'
 
 export default function CoOwnLayout({
   children,
@@ -32,7 +33,7 @@ export default function CoOwnLayout({
         {children}
 
       </main>
-
+      <ScrollToTop />
       <Footer />
     </>
   )

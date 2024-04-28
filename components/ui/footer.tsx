@@ -26,7 +26,7 @@ export default function Footer() {
                   />
                 </Link>
               </div>
-              <div className="text-gold-500">World's Most Inclusive Enterprises. Co-owned by consumers & workforce.</div>
+              <div className="text-gold-500">World's Most Inclusive Enterprises. Co-owned by customers & workforce.</div>
             </div>
 
             {/* 2nd, 3rd and 4th blocks */}

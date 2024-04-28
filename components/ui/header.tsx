@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 import MarqueeScroller from './Marquee'
 
 export default function Header() {
-  const [selectedLink, setSelectedLink] = useState('page1');
+  const [selectedLink, setSelectedLink] = useState('');
 
   return (
     <header className="absolute w-full z-30 overflow-x-hidden ">

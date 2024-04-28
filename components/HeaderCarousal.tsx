@@ -56,12 +56,12 @@ export default function HeaderCarousal() {
                 );
               }}
         >
-            <div className='h-max xl:h-[700px] pt-10'>
+            <div className='h-max xl:h-[700px] pt-0 md:pt-10'>
                 <div className="max-w-full flex flex-wrap flex-col-reverse lg:flex-row lg:flex-nowrap items-center justify-around mx-auto pb-4">
 
-                    <div className='hero-section w-full max-w-2xl md:w-4/6 px-8 mt-8 lg:mt-0'>
-                        <h1 className="h1 mb-4" data-aos="fade-up">Your <span className='text-gold-500'>Gold</span> Savings</h1>
-                        <h1 className="h1 mb-4 text-left" data-aos="fade-up">
+                    <div className='hidden lg:flex flex-col hero-section w-full max-w-2xl md:w-4/6 px-8 mt-8 lg:mt-0'>
+                        <h1 className="h1 mb-4 text-center" data-aos="fade-up">Your <span className='text-gold-500'>Gold</span> Savings</h1>
+                        <h1 className="h1 mb-4 text-center" data-aos="fade-up">
                             Made
                             <span className='text-gold-500 pl-2'>
                                 <ReactTyped
