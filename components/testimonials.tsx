@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import TestimonialSlider from './Testimonial/testimonial-slider';
+import VideoSlider from './Testimonial/video-slider';
+import { descriptors } from 'chart.js/dist/core/core.defaults';
 
 
 
@@ -43,6 +45,33 @@ export default function Testimonials() {
     // Add more testimonial objects as needed
   ];
 
+  const videos =[
+    {
+      embedId: "uLGRivuMRtA",
+      description:"",
+    },
+    {
+      embedId: "9rfcP9wEGiU",
+      description:"",
+    },
+    {
+      embedId: "OG-MWCBtZCQ",
+      description:"",
+    },
+    {
+      embedId: "67gTVHOy__4",
+      description:"",
+    },
+    {
+      embedId: "-iWIS3GCfhc",
+      description:"",
+    },
+    {
+      embedId: "fIJEq8ce9bM",
+      description:"",
+    },
+  ]
+
   return (
     <section>
       <div className="mx-auto max-w-screen-xl px-4 py-4 md:px-6 lg:px-8 lg:py-16">
@@ -51,7 +80,10 @@ export default function Testimonials() {
         </h2>
 
         <div className="mt-8 ">
-            <TestimonialSlider />
+            <TestimonialSlider testimonials={testimonials} />
+        </div>
+        <div className="mt-8 ">
+            <VideoSlider videos={videos} />
         </div>
       </div>
     </section>

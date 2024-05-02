@@ -1,5 +1,4 @@
 'use client'
-import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -12,45 +11,15 @@ import './testimonial-slider.css'
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
-export default function TestimonialSlider() {
-    const testimonials = [
-        {
-            name: 'Ramalingam',
-            title: 'Farmer',
-            content: "As a farmer, I'm amazed that technology now allows us to save gold from the comfort of our homes. It's a revolutionary way for farmers like me to invest and secure a golden future effortlessly."
-        },
-        {
-            name: 'Gautham',
-            title: 'College Student',
-            content: "As someone who generally tests various financial apps, I must say I really liked the concept of Value1. It stands out with its unique approach, and I can see the potential for making savings in gold accessible to many. It's a concept I can confidently recommend to others."
-        },
-        {
-            name: 'Rahul',
-            title: 'Software Engineer',
-            content: "Value1 is not just an app; it's a financial game-changer. With a starting investment of just Rs 1, it has redefined accessibility to gold savings!"
-        },
-        {
-            name: 'Lakshmi',
-            title: 'Homemaker',
-            content: "Value1 has made my financial journey simple and rewarding, proving that even the smallest investments can lead to significant returns"
-        },
-        {
-            name: 'Sam',
-            title: 'Manager',
-            content: "Value1 makes saving in 24k gold unbelievably easy! I couldn't believe I could buy gold in the smallest denominations. Simply amazing!"
-        },
-        {
-            name: 'Saravanan',
-            title: 'C A',
-            content: "As a Chartered Accountant, I truly appreciate the concept behind Value1. I believe this innovative approach will be a game-changer, helping many to save gold effortlessly. Excited about the positive impact it will bring!"
-        },
-        {
-            name: 'Pooguzhali',
-            title: 'Financial Advisor',
-            content: "As a financial advisor, I'm now recommending Value1 to all my friends and clients. The app's concept of starting with just Rs 1 is incredibly useful and aligns perfectly with sound financial planning"
-        },
-        // Add more testimonial objects as needed
-    ];
+interface SliderProp {
+    testimonials: {
+        title: string;
+        name: string;
+        content: string;
+    }[];
+}
+
+export default function TestimonialSlider({ testimonials }: SliderProp) {
     return (
         <Swiper
             spaceBetween={30}
@@ -58,26 +27,27 @@ export default function TestimonialSlider() {
             autoplay={{
                 delay: 3000,
                 disableOnInteraction: true,
+                
             }}
             pagination={{
-                clickable:true
+                clickable: true
             }}
             loop={true}
             breakpoints={{
                 640: {
-                  slidesPerView: 1,
-                  spaceBetween: 20,
+                    slidesPerView: 1,
+                    spaceBetween: 20,
                 },
                 768: {
-                  slidesPerView: 2,
-                  spaceBetween: 40,
+                    slidesPerView: 2,
+                    spaceBetween: 40,
                 },
                 1024: {
-                  slidesPerView: 3,
-                  spaceBetween: 10,
+                    slidesPerView: 3,
+                    spaceBetween: 10,
                 },
-              }}
-            
+            }}
+
             modules={[Autoplay, Pagination, Navigation]}
         >
             {testimonials.map((testimonial, index) => (

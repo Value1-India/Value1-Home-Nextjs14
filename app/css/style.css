@@ -276,3 +276,8 @@ html {
   -ms-transform: translateX(-50%) translateY(-50%);
   -o-transform: translateX(-50%) translateY(-50%);
 }
+
+.purple-glow {
+  filter: drop-shadow(0 0 5px #fdde81);
+  -webkit-filter: drop-shadow(0 0 5px #fdde81);
+}

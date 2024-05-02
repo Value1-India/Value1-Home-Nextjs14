@@ -1,19 +1,15 @@
-import React from 'react'
 
 interface VideoBlockProps {
     embedId: string;
-    width:string;
-    height:string;
     description: string;
+    className: string;
 }
 
-const VideoBlock = ({ embedId,width,height,description }: VideoBlockProps) => {
+const VideoBlock = ({ embedId,description,className }: VideoBlockProps) => {
     return (
         <div className="mb-10">
             <iframe
-                //className='w-full h-auto'
-                width={width}
-                height={height}
+                className={className}
                 src={`https://www.youtube.com/embed/${embedId}`}
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

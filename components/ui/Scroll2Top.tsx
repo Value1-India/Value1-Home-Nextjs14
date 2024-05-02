@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import Top from '@/public/images/svgs/up-arrow-icon.svg';
