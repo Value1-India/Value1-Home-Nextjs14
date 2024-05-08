@@ -24,8 +24,11 @@ export default function VideoSlider({ videos }: SliderProp) {
         <Swiper
             spaceBetween={30}
             centeredSlides={true}
+            simulateTouch
+            slidesPerView={'auto'}
+            speed={5000}
             autoplay={{
-                delay: 3000,
+                delay: 0,
                 disableOnInteraction: true,
                 reverseDirection: true
             }}

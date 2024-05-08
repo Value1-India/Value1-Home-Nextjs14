@@ -24,10 +24,10 @@ export default function TestimonialSlider({ testimonials }: SliderProp) {
         <Swiper
             spaceBetween={30}
             centeredSlides={true}
+            speed={5000}
             autoplay={{
-                delay: 3000,
+                delay: 0,
                 disableOnInteraction: true,
-                
             }}
             pagination={{
                 clickable: true

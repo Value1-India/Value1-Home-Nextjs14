@@ -22,8 +22,9 @@ import Rewards from "@/public/images/svgs/rewards.svg"
 import Connection from "@/public/images/svgs/connection.svg"
 import PremiumMetals from "@/public/images/svgs/premium-metals.svg"
 import Brands from "@/public/images/svgs/brands.svg"
-import Franchise from "@/public/images/svgs/franchaise.svg"
+import Person from "@/public/images/Co-own person.png"
 import { GoldHistoryGraph } from '@/components/GoldHistoryGraph';
+import { TechHistory } from '@/components/TechHistory';
 import VideoBlock from '@/components/VideoBlock';
 import FAQmini from '@/components/mini-faq';
 
@@ -41,7 +42,7 @@ export default function CoOwnPage() {
               <div className='font-semibold text-2xl md:text-5xl'>new way to own <span className='text-gold-500'>gold</span> store.</div>
               <div className='px-4 text-sm font-medium md:text-xl mt-10'>Buy gold & become a <span className='text-gold-500'>shareholder</span>, no extra Investment required.</div>
               <div className='px-4 text-sm font-medium md:text-xl'>Secure your stake in the brilliance of gold today!</div>
-              <a href='https://app.value1.in' className='px-5 py-3 md:text-xl rounded-full bg-white border border-gold-500 text-gold-500 mt-10'>Buy Now</a>
+              <a href='https://app.value1.in' className='px-5 py-3 md:text-xl rounded-full bg-white border border-gold-500 text-gold-500 mt-10'>Co-Own Now</a>
             </div>
           </div>
         </div>
@@ -65,25 +66,28 @@ export default function CoOwnPage() {
       <section className='max-w-7xl mx-auto mt-14 md:mt-32'>
         <div className='flex flex-col items-center justify-center'>
           <div className='font-bold text-3xl md:text-5xl text-center'>Celebrate the Benefits of <span className='text-gold-500'>Co-Ownership</span></div>
-          <div className='mb-24 font-semibold text-xl text-center'>As a co-owner of our <span className='text-gold-500'>gold</span> store, you'll shop with unprecedented advantages</div>
+          <div className='mb-5 font-semibold text-xl text-center'>As a co-owner of our <span className='text-gold-500'>gold</span> store, you'll shop with unprecedented advantages</div>
 
-          <div className='max-w-sm md:max-w-sm lg:max-w-5xl mx-auto flex flex-wrap items-center justify-center gap-5'>
-            <BenefitCard icon={Owner} number={1} description='Embrace the opportunity to co-own the Value1 gold store without additional investment' />
-            <BenefitCard icon={Extra} number={2} description='Enjoy up to 3% extra gold on every gold purchase. (This includes covering your GST, ensuring you receive the full amount of gold for the price paid, accompanied by a GST invoice.)' />
-            <BenefitCard icon={QualityStars} number={3} description="Explore over 100+ exclusive designs from India's top jewellery manufacturers, offering the lowest making cost with highest quality guaranteed." />
-            <BenefitCard icon={PremiumMetals} number={4} description="Gain direct access to buy premium precious metals (gold, silver, and diamond) sourced directly from refineries. " />
-            <BenefitCard icon={Rewards} number={5} description="Access our gold reward platform, guaranteeing 24K gold rewards for each transaction, which includes 400+ top brands, travel, ticketing, and other exclusive services. Opportunity to save up to 40% from your expenses as gold, as a reward" />
-            <BenefitCard icon={Community} number={6} description="Join our exclusive community" />
-            <BenefitCard icon={Connection} number={7} description="Connect with handpicked value professionals for trusted services such as healthcare, legal, and financial consultancy" />
-            <BenefitCard icon={Brands} number={8} description="Experience top-tier quality with our carefully selected value brands" />
-            <BenefitCard icon={ValueCoins} number={9} description="Contribute to the novel cause of co-owning and earn extra value coins by spreading the word" />
-            <BenefitCard icon={Franchise} number={10} description="Opportunity to set up the city chapter and franchise in your location" />
+          <div className='max-w-sm md:max-w-sm lg:max-w-5xl mx-auto flex flex-wrap items-center justify-center mb-10'>
+              <Image src={Person} alt={'Co-own'} width={700} />
+          </div>
+          <div className='max-w-sm md:max-w-sm lg:max-w-5xl mx-auto flex flex-col items-center justify-center'>
+            <BenefitCard icon={Brands} description='Embrace the opportunity to co-own the Value1 gold store without additional investment' />
+            <BenefitCard icon={Brands} description='Enjoy up to 3% extra gold on every gold purchase. (This includes covering your GST, ensuring you receive the full amount of gold for the price paid, accompanied by a GST invoice.)' />
+            <BenefitCard icon={Brands} description="Explore over 100+ exclusive designs from India's top jewellery manufacturers, offering the lowest making cost with highest quality guaranteed." />
+            <BenefitCard icon={Brands} description="Gain direct access to buy premium precious metals (gold, silver, and diamond) sourced directly from refineries. " />
+            <BenefitCard icon={Brands} description="Access our gold reward platform, guaranteeing 24K gold rewards for each transaction, which includes 400+ top brands, travel, ticketing, and other exclusive services. Opportunity to save up to 40% from your expenses as gold, as a reward" />
+            <BenefitCard icon={Brands} description="Join our exclusive community" />
+            <BenefitCard icon={Brands} description="Connect with handpicked value professionals for trusted services such as healthcare, legal, and financial consultancy" />
+            <BenefitCard icon={Brands} description="Experience top-tier quality with our carefully selected value brands" />
+            <BenefitCard icon={Brands} description="Contribute to the novel cause of co-owning and earn extra value coins by spreading the word" />
+            <BenefitCard icon={Brands} description="Opportunity to set up the city chapter and franchise in your location" />
           </div>
         </div>
       </section>
       <section className='max-w-sm md:max-w-7xl mx-auto px-3 text-center mt-14 md:mt-24'>
         <div className='text-3xl font-bold md:text-5xl'>Ride the <span className='text-gold-500'>Wave of Gold</span></div>
-        <div className='text-xl text-white font-bold mb-10'>Join Us on Our Journey of Growth and Prosperity</div>
+        <div className='text-xl text-white font-bold mb-20'>Join Us on Our Journey of Growth and Prosperity</div>
 
         <div className='flex flex-col lg:flex-row items-center justify-between gap-10'>
           <div className='flex flex-col items-center justify-center md:w-[600px]'>
@@ -93,9 +97,9 @@ export default function CoOwnPage() {
             </div>
           </div>
           <div className='flex flex-col items-center justify-center md:w-[600px]'>
-            <div className='text-3xl font-bold mb-10 md:text-4xl text-wrap'>History of <span className='text-gold-500'>Gold Startups</span> in India</div>
+            <div className='text-2xl font-semibold mb-10'>Be part of the next wave of spectacular growth. Join us in <span className='text-gold-500'>co-owning</span> a piece of the future with our <span className='text-gold-500'>gold store</span>.</div>
             <div className='h-72 lg:h-full w-full flex items-center justify-center px-3'>
-              <GoldHistoryGraph />
+              <TechHistory />
             </div>
           </div>
         </div>

@@ -30,7 +30,7 @@ export default function HeaderCarousal() {
     }
     return (
         <Carousel
-            axis='horizontal' infiniteLoop autoPlay emulateTouch={true} showArrows={true} interval={3000} transitionTime={1000} stopOnHover={true} showThumbs={false} showStatus={false} showIndicators={true}
+            axis='horizontal' infiniteLoop emulateTouch={true} showArrows={true} interval={3000} transitionTime={1000} stopOnHover={true} showThumbs={false} showStatus={false} showIndicators={true}
             className='w-full h-auto'
             renderArrowPrev={(clickHandler, hasPrev) => {
                 return (
@@ -90,8 +90,8 @@ export default function HeaderCarousal() {
                     <div id='rate-section' className='max-w-lg w-full md:px-4 px-2 relative' data-aos='fade-left' data-aos-delay='300'> {/*md:w-2/3 lg:w-7/12 xl:w-5/12*/}
                         {/* <RateCard goldRate={data.GoldBuy.toString()} silverRate={data.SilverBuy.toString()} /> */}
                         <RateCard goldRate={data.goldRate} silverRate={data.silverRate} />
-                        <div className='absolute -top-16 lg:-top-10 -left-12 lg:-left-24 animate-move-shaking'>
-                            <Image src={CommonMan} alt='offers' width={250} className='w-40 lg:w-64' style={{ zIndex: 9999 }} unoptimized />
+                        <div className='absolute top-5 lg:-top-10 -left-16 lg:-left-24 animate-move-shaking'>
+                            <Image src={CommonMan} alt='offers' width={250} className='w-52 lg:w-64' style={{ zIndex: 9999 }} unoptimized />
                             <div></div>
                         </div>
                         {/* <div className='absolute -bottom-5 right-0 rotate-12'>
