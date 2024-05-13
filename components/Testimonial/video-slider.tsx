@@ -26,12 +26,13 @@ export default function VideoSlider({ videos }: SliderProp) {
             centeredSlides={true}
             simulateTouch
             slidesPerView={'auto'}
-            speed={5000}
-            autoplay={{
-                delay: 0,
-                disableOnInteraction: true,
-                reverseDirection: true
-            }}
+            speed={1000}
+            // autoplay={{
+            //     delay: 0,
+            //     disableOnInteraction: true,
+            //     reverseDirection: true
+            // }}
+            navigation={true}
             pagination={{
                 clickable: true
             }}

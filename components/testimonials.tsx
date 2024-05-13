@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import TestimonialSlider from './Testimonial/testimonial-slider';
 import VideoSlider from './Testimonial/video-slider';
-import { descriptors } from 'chart.js/dist/core/core.defaults';
 
 
 
@@ -51,23 +50,31 @@ export default function Testimonials() {
       description:"",
     },
     {
-      embedId: "9rfcP9wEGiU",
+      embedId: "30OA92WUYB4",
       description:"",
     },
     {
-      embedId: "OG-MWCBtZCQ",
+      embedId: "04qPBSNDepw",
       description:"",
     },
     {
-      embedId: "67gTVHOy__4",
+      embedId: "vTRCk8sDL3c",
       description:"",
     },
     {
-      embedId: "-iWIS3GCfhc",
+      embedId: "ywDLpeUZVOE",
       description:"",
     },
     {
-      embedId: "fIJEq8ce9bM",
+      embedId: "X9mFpaVA7rw",
+      description:"",
+    },
+    {
+      embedId: "JkVtYxBdugU",
+      description:"",
+    },
+    {
+      embedId: "z6DEYieNswA",
       description:"",
     },
   ]
@@ -78,12 +85,11 @@ export default function Testimonials() {
         <h2 className="text-center text-4xl font-bold tracking-tight text-gold-500 md:text-5xl">
           Read trusted reviews from our customers
         </h2>
-
-        <div className="mt-8 ">
-            <TestimonialSlider testimonials={testimonials} />
-        </div>
         <div className="mt-8 ">
             <VideoSlider videos={videos} />
+        </div>
+        <div className="mt-8 ">
+            <TestimonialSlider testimonials={testimonials} />
         </div>
       </div>
     </section>

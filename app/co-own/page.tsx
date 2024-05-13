@@ -72,16 +72,16 @@ export default function CoOwnPage() {
               <Image src={Person} alt={'Co-own'} width={700} />
           </div>
           <div className='max-w-sm md:max-w-sm lg:max-w-5xl mx-auto flex flex-col items-center justify-center'>
-            <BenefitCard icon={Brands} description='Embrace the opportunity to co-own the Value1 gold store without additional investment' />
-            <BenefitCard icon={Brands} description='Enjoy up to 3% extra gold on every gold purchase. (This includes covering your GST, ensuring you receive the full amount of gold for the price paid, accompanied by a GST invoice.)' />
-            <BenefitCard icon={Brands} description="Explore over 100+ exclusive designs from India's top jewellery manufacturers, offering the lowest making cost with highest quality guaranteed." />
-            <BenefitCard icon={Brands} description="Gain direct access to buy premium precious metals (gold, silver, and diamond) sourced directly from refineries. " />
-            <BenefitCard icon={Brands} description="Access our gold reward platform, guaranteeing 24K gold rewards for each transaction, which includes 400+ top brands, travel, ticketing, and other exclusive services. Opportunity to save up to 40% from your expenses as gold, as a reward" />
-            <BenefitCard icon={Brands} description="Join our exclusive community" />
-            <BenefitCard icon={Brands} description="Connect with handpicked value professionals for trusted services such as healthcare, legal, and financial consultancy" />
-            <BenefitCard icon={Brands} description="Experience top-tier quality with our carefully selected value brands" />
-            <BenefitCard icon={Brands} description="Contribute to the novel cause of co-owning and earn extra value coins by spreading the word" />
-            <BenefitCard icon={Brands} description="Opportunity to set up the city chapter and franchise in your location" />
+            <BenefitCard icon={Gold} description='Embrace the opportunity to co-own the Value1 gold store without additional investment' />
+            <BenefitCard icon={Gold} description='Enjoy up to 3% extra gold on every gold purchase. (This includes covering your GST, ensuring you receive the full amount of gold for the price paid, accompanied by a GST invoice.)' />
+            <BenefitCard icon={Gold} description="Explore over 100+ exclusive designs from India's top jewellery manufacturers, offering the lowest making cost with highest quality guaranteed." />
+            <BenefitCard icon={Gold} description="Gain direct access to buy premium precious metals (gold, silver, and diamond) sourced directly from refineries. " />
+            <BenefitCard icon={Gold} description="Access our gold reward platform, guaranteeing 24K gold rewards for each transaction, which includes 400+ top brands, travel, ticketing, and other exclusive services. Opportunity to save up to 40% from your expenses as gold, as a reward" />
+            <BenefitCard icon={Gold} description="Join our exclusive community" />
+            <BenefitCard icon={Gold} description="Connect with handpicked value professionals for trusted services such as healthcare, legal, and financial consultancy" />
+            <BenefitCard icon={Gold} description="Experience top-tier quality with our carefully selected value brands" />
+            <BenefitCard icon={Gold} description="Contribute to the novel cause of co-owning and earn extra value coins by spreading the word" />
+            <BenefitCard icon={Gold} description="Opportunity to set up the city chapter and franchise in your location" />
           </div>
         </div>
       </section>
@@ -89,16 +89,16 @@ export default function CoOwnPage() {
         <div className='text-3xl font-bold md:text-5xl'>Ride the <span className='text-gold-500'>Wave of Gold</span></div>
         <div className='text-xl text-white font-bold mb-20'>Join Us on Our Journey of Growth and Prosperity</div>
 
-        <div className='flex flex-col lg:flex-row items-center justify-between gap-10'>
-          <div className='flex flex-col items-center justify-center md:w-[600px]'>
+        <div className='flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10 h-max'>
+          <div className='flex flex-col items-center justify-between md:w-[600px] h-96 md:h-[400px]'>
             <div className='text-2xl font-semibold mb-10'>India Witnesses an Astounding Growth of Gold, Over <span className='text-gold-500'>1,17,952%</span>, from 1964 to 2024.</div>
-            <div className='h-full w-full flex items-center justify-center px-3'>
+            <div className='h-48 lg:h-64 w-auto flex items-center justify-center px-3'>
               <GoldHistoryGraph />
             </div>
           </div>
-          <div className='flex flex-col items-center justify-center md:w-[600px]'>
+          <div className='flex flex-col items-center justify-between md:w-[600px] h-96 md:h-[400px]'>
             <div className='text-2xl font-semibold mb-10'>Be part of the next wave of spectacular growth. Join us in <span className='text-gold-500'>co-owning</span> a piece of the future with our <span className='text-gold-500'>gold store</span>.</div>
-            <div className='h-72 lg:h-full w-full flex items-center justify-center px-3'>
+            <div className='h-48 lg:h-64 w-auto flex items-center justify-center px-3'>
               <TechHistory />
             </div>
           </div>
@@ -110,13 +110,13 @@ export default function CoOwnPage() {
           <div className='text-3xl font-bold mb-10 md:text-5xl'>What Our <span className='text-gold-500'>Members</span> Says</div>
           <div className='px-3 flex flex-col md:flex-row md:flex-wrap items-center justify-center gap-5'>
             <VideoBlock embedId='uLGRivuMRtA' className='w-80 h-48 md:w-96 px-2' description="" />
-            <VideoBlock embedId='9rfcP9wEGiU' className='w-80 h-48 md:w-96 px-2' description="" />
-            <VideoBlock embedId='OG-MWCBtZCQ' className='w-80 h-48 md:w-96 px-2' description="" />
-            <VideoBlock embedId='z6DEYieNswA' className='w-80 h-48 md:w-96 px-2' description="" />
-            <VideoBlock embedId='Ouz94azZfBM' className='w-80 h-48 md:w-96 px-2' description="" />
-            <VideoBlock embedId='67gTVHOy__4' className='w-80 h-48 md:w-96 px-2' description="" />
-            <VideoBlock embedId='-iWIS3GCfhc' className='w-80 h-48 md:w-96 px-2' description="" />
-            <VideoBlock embedId='fIJEq8ce9bM' className='w-80 h-48 md:w-96 px-2' description="" />
+            <VideoBlock embedId='30OA92WUYB4' className='w-80 h-48 md:w-96 px-2' description="" />
+            <VideoBlock embedId='04qPBSNDepw' className='w-80 h-48 md:w-96 px-2' description="" />
+            <VideoBlock embedId='vTRCk8sDL3c' className='w-80 h-48 md:w-96 px-2' description="" />
+            <VideoBlock embedId='ywDLpeUZVOE' className='w-80 h-48 md:w-96 px-2' description="" />
+            <VideoBlock embedId='X9mFpaVA7rw' className='w-80 h-48 md:w-96 px-2' description="" />
+            <VideoBlock embedId='JkVtYxBdugU' className='w-80 h-48 md:w-96 px-2' description="" />
+            <VideoBlock embedId='iUxbLJ-1zhg' className='w-80 h-48 md:w-96 px-2' description="" />
           </div>
         </div>
       </section>
