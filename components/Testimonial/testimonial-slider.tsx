@@ -16,6 +16,7 @@ interface SliderProp {
         title: string;
         name: string;
         content: string;
+        rating:number;
     }[];
 }
 
@@ -57,7 +58,7 @@ export default function TestimonialSlider({ testimonials }: SliderProp) {
                             <div className="flex flex-row items-center justify-center">
                                 <div className='flex flex-col-reverse items-center justify-between'>
                                     <div className="flex justify-center gap-1 group-hover:animate-ping text-gold-500 mt-2">
-                                        {[...Array(5)].map((_, i) => (
+                                        {[...Array(testimonial.rating)].map((_, i) => (
                                             <svg
                                                 key={i}
                                                 xmlns="http://www.w3.org/2000/svg"

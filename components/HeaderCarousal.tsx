@@ -99,11 +99,12 @@ export default function HeaderCarousal() {
                         </div> */}
                         {/* <div className='absolute -bottom-5 right-0 rotate-12'>
                             <Image src={ValueCoin} alt='offers' width={250} className='w-16 lg:w-24 animate-wobble-right' />
-                        </div> ***thatha*** */} 
+                        </div> ***thatha*** */}
                     </div>
                 </div>
             </div>
-            <></>
+            <>
+            </>
             {/* <div className='flex items-center justify-center'>
                 <img src="images/logo-big.png" className='w-96' />
                 <p className="legend">Legend 2</p>

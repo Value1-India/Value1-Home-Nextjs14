@@ -14,6 +14,7 @@ import GoldCoins from '@/public/images/svgs/gold-coins.svg'
 import Withdraw from '@/public/images/svgs/withdraw.svg'
 import Certificate from '@/public/images/svgs/certificate.svg'
 import ValueCoin from '@/public/images/svgs/value-coin.svg'
+import Member from '@/public/images/svgs/member.svg'
 
 const Infographics = () => {
 
@@ -43,6 +44,18 @@ const Infographics = () => {
                     </div>
                     <div className='p-1 step2 relative'>
                         <div className='absolute z-10 bg-transparent h-20 -top-[52px] left-[38px] border-2 border-gold-500 border-dashed rounded-full'></div>
+                        <div className='hidden xl:block relative z-10 bg-transparent w-20 top-[45px] left-[57px] border-2 border-gold-500 border-dashed rounded-full'></div>
+                        <div className='absolute z-10 top-8 left-5 w-10'><Image src={Pointer} height={100} width={100} alt='Pointer' /></div>
+                        <div className='relative step-container left-20 xl:left-36 -top-3 z-0 flex flex-col items-center text-gold-500 px-1 py-1 rounded-xl w-36 max-w-xs'>
+                            <div>
+                                <Image src={Member} alt='Add User' className='w-16 px-1' />
+                            </div>
+                            <div className='font-bold text-sm text-center'>Become a co-owning Member</div>
+                            <div className='font-light text-white text-xs w-28 text-center'> Complete KYC & receive your stock option through the grant letter.</div>
+                        </div>
+                    </div>
+                    <div className='p-1 step2 relative'>
+                        <div className='absolute z-10 bg-transparent h-32 -top-[96px] left-[38px] border-2 border-gold-500 border-dashed rounded-full'></div>
                         <div className='hidden xl:block relative z-10 bg-transparent w-20 top-[45px] left-[57px] border-2 border-gold-500 border-dashed rounded-full'></div>
                         <div className='absolute z-10 top-8 left-5 w-10'><Image src={Pointer} height={100} width={100} alt='Pointer' /></div>
                         <div className='relative step-container left-20 xl:left-36 -top-3 z-0 flex flex-col items-center text-gold-500 px-1 py-1 rounded-xl w-36 max-w-xs'>

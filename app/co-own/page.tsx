@@ -116,7 +116,7 @@ export default function CoOwnPage() {
             <VideoBlock embedId='ywDLpeUZVOE' className='w-80 h-48 md:w-96 px-2' description="" />
             <VideoBlock embedId='X9mFpaVA7rw' className='w-80 h-48 md:w-96 px-2' description="" />
             <VideoBlock embedId='JkVtYxBdugU' className='w-80 h-48 md:w-96 px-2' description="" />
-            <VideoBlock embedId='iUxbLJ-1zhg' className='w-80 h-48 md:w-96 px-2' description="" />
+            <VideoBlock embedId='z6DEYieNswA' className='w-80 h-48 md:w-96 px-2' description="" />
           </div>
         </div>
       </section>
